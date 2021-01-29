@@ -18,5 +18,6 @@ public class Region : MonoBehaviour
         {
             m_regionBlockingObstacle.Unlock();
         }
+        m_isLocked = false;
     }
 }
