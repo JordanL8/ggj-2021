@@ -28,6 +28,9 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
     public void AddFloofToRegion(Region curRegion)
     {
         Floof floofToAdd = FloofManager.Instance.GetRandomFloof();
+        Transform[] spawnPoints = curRegion.m_spawnPoints;
+
+        // Instantiate the floof and chuck it somewhere
     }
 
 
