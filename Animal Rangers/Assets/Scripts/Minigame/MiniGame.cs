@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class MiniGame : MonoBehaviour
 {
-    private Obstacle m_parent;
+    public delegate void OnCompleteDelegate();
+    public OnCompleteDelegate m_onComplete;
 
-    public void Initialise(Obstacle parent)
-    {
-        m_parent = parent;
-    }
 
     protected virtual void Complete()
     {
-        m_parent.Clear();
+        m_onComplete?.Invoke();
     }
 }

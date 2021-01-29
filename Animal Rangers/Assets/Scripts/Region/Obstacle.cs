@@ -8,7 +8,7 @@ public class Obstacle : MonoBehaviour
 
     public void Start()
     {
-        GetComponent<MiniGame>().Initialise(this);
+        GetComponent<MiniGame>().m_onComplete += Clear;
     }
 
     public void Clear()
