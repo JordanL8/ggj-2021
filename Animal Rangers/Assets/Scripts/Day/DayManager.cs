@@ -13,6 +13,9 @@ public class DayManager : SingleSceneSingleton<DayManager>
     private float m_curTime = 0.0f;
     private bool m_isTicking = false;
 
+    private int m_currentDay = 0;
+    public int CurrentDay => m_currentDay;
+
     public void Start()
     {
         ProcessDayStart();
@@ -27,6 +30,8 @@ public class DayManager : SingleSceneSingleton<DayManager>
 
         m_isTicking = true;
         m_curTime = 0.0f;
+
+        m_currentDay++;
     }
 
     public void ProcessDayEnd()
