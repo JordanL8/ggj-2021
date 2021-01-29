@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_FX_water
-  m_Shader: {fileID: -6465566751694194690, guid: e6861b70998103d4ab00bcc8f01a97fe,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: e6861b70998103d4ab00bcc8f01a97fe, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,7 +18,19 @@ Material:
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_4AB35C1F: 4
     - Vector1_7564D9D4: 0.5
@@ -30,8 +41,9 @@ Material:
     - Vector1_DF07556D: 12
     - Vector1_F3CD828D: 5
     m_Colors:
-    - Color_54B18994: {r: 0.1500617, g: 0.5071051, b: 1.272937, a: 0}
+    - Color_54B18994: {r: 1, g: 0, b: 0.95852184, a: 0}
     - Color_80A47FA5: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0}
     - Color_81EC1B4E: {r: 0.38812745, g: 0.91311544, b: 0.9245283, a: 0}
     - Color_DA7D120A: {r: 1, g: 1, b: 1, a: 0}
     - Vector2_D652E4B7: {r: 0.1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
