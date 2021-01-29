@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Region : MonoBehaviour
 {
-    public Vector3[] m_spawnPoints;
-    public Obstacle m_regionBlockingObstacle;
+    public Transform[] m_spawnPoints;
+    public Obstacle[] m_obstacles;
+    public GameObject m_blocker;
 
     public ProgressManager.EJobTitle m_requiredTitle;
 
@@ -14,10 +15,7 @@ public class Region : MonoBehaviour
 
     public void Unlock()
     {
-        if(!m_regionBlockingObstacle.m_isInteractable)
-        {
-            m_regionBlockingObstacle.Unlock();
-        }
+        m_blocker.SetActive(false);
         m_isLocked = false;
     }
 }

@@ -5,4 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+
+    public void Start()
+    {
+        StartGame();
+    }
+
+    public void StartGame()
+    {
+        DayManager.Instance.ProcessDayStart();
+    }
 }

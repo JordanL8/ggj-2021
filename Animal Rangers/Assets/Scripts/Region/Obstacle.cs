@@ -6,8 +6,14 @@ public class Obstacle : MonoBehaviour
 {
     public bool m_isInteractable;
 
-    public void Unlock()
+    public void Start()
     {
-        m_isInteractable = true;
+        GetComponent<MiniGame>().Initialise(this);
+    }
+
+    public void Clear()
+    {
+        // This gets rid of the obstacle. We will just disable for now.
+        gameObject.SetActive(false);
     }
 }
