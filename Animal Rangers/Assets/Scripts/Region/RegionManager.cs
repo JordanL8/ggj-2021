@@ -29,6 +29,6 @@ public class RegionManager : MonoBehaviour
             }
         }
 
-        RescueManager.Instance.PopulateRegion(activeRegions[activeRegions.Count - 1]);
+        RescueManager.Instance.PopulateRegions(activeRegions);
     }
 }
