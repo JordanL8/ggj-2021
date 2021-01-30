@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+// TODO: Disable on 2d Minigames
+
 public class MouseLook : MonoBehaviour
 {
     public float mouseSensitivity;
