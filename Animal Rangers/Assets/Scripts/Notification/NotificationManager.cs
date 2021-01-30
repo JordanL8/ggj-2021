@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NotificationManager : SingleSceneSingleton<NotificationManager>
 {
-    public Pager m_pagerUI;
+    public Pager m_pagerUI = null;
 
     public void DisplayNotification(string notification)
     {
@@ -13,6 +13,9 @@ public class NotificationManager : SingleSceneSingleton<NotificationManager>
 
     private void Start()
     {
-        DisplayNotification("Help! My floofy boy got lost in the forest biome! Please can you look for him?");
+        if(m_pagerUI == null)
+        {
+            m_pagerUI = FindObjectOfType<Pager>();
+        }
     }
 }
