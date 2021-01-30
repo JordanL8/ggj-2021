@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc923ca303c74f4da7a18372ccf17f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_initialPosition: {x: -10, y: -150, z: 0}
+  m_initialPosition: {x: -10, y: -300, z: 0}
   m_displayPosition: {x: -10, y: 10, z: 0}
   m_displayText: {fileID: 3867106082321762960}
   m_readingTime: 10

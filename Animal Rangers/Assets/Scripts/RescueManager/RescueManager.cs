@@ -8,6 +8,19 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
 
     public float m_gibblesPerRescue = 20.0f;
 
+    private List<Floof> spawnedFloofs = new List<Floof>();
+
+    private Floof m_currentFloof = null;
+    public Floof CurrentFloof => m_currentFloof;
+
+
+    /* ---- FOR TESTING ---- */
+    public void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+            RescueFloofComplete();
+    }
+    /* ---- FOR TESTING ---- */
 
 
     public void PopulateRegions(List<Region> activeRegions)
@@ -24,6 +37,10 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
                 numberOfFloofsToday--;
             }
         }
+
+        DeactivateExtraFloofs();
+        m_currentFloof = spawnedFloofs[0];
+        NotificationManager.Instance.DisplayNotification(m_currentFloof.m_floofType, m_currentFloof.MyRegion.m_name);
     }
 
     public void AddFloofToRegion(Region curRegion)
@@ -31,19 +48,48 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
         Floof floofToAdd = FloofManager.Instance.GetRandomFloof();
         Transform[] spawnPoints = curRegion.m_spawnPoints;
 
-        // Instantiate the floof and chuck it somewhere
-        FloofSpawner.Instance.SpawnFloofs(floofToAdd, spawnPoints);
+        // Instantiate the floof and chuck it somewhere       
+
+        Floof newFloof = FloofSpawner.Instance.SpawnFloofs(floofToAdd, spawnPoints);
+        newFloof.SetRegion(curRegion);
+        spawnedFloofs.Add(newFloof);
     }
 
-
+    public void DeactivateExtraFloofs()
+    {
+        for (int i = 1; i < spawnedFloofs.Count; i++)
+        {
+            spawnedFloofs[i].gameObject.SetActive(false);
+        }
+    }
 
     public void GetFloof(Floof floof)
     {
         floof.StartFollowing();
     }
 
-    public void RescueFloof(Floof floof)
+    public void RescueFloofComplete()
     {
         GibbleManager.Instance.Credit(m_gibblesPerRescue);
+
+        // Last floof rescued
+        if (spawnedFloofs.Count == 1)
+        {
+            Destroy(spawnedFloofs[0].gameObject);
+            spawnedFloofs.Clear();
+
+            DayManager.Instance.ProcessDayEnd();
+        }
+        else
+        {
+            Destroy(spawnedFloofs[0].gameObject);
+            spawnedFloofs.RemoveAt(0);
+
+            // Activate next floof
+            spawnedFloofs[0].gameObject.SetActive(true);
+            m_currentFloof = spawnedFloofs[0];
+            NotificationManager.Instance.DisplayNotification(m_currentFloof.m_floofType, m_currentFloof.MyRegion.m_name);
+            DeactivateExtraFloofs();
+        }
     }
 }
