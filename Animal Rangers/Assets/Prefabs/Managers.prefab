@@ -131,7 +131,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5098fa3f685ca6447a7db72f16da84a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_floofPrefabs: []
+  m_floofPrefabs:
+  - {fileID: 7218320124859761378, guid: 628be098456225b4fabff2a8e87fffca, type: 3}
+  - {fileID: 6577979504512095119, guid: 1637528ce1d81f3429347d61c52bbc48, type: 3}
+  - {fileID: 6684367270680915461, guid: 203623d09ae303e41a4b5e17bcd7a00b, type: 3}
+  - {fileID: 5374428328268825268, guid: fa315feecd10322489e481e3486ffc8f, type: 3}
 --- !u!1 &1442936970144723058
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,6 +180,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pagerUI: {fileID: 0}
+  m_notificationTexts:
+  - Help! My cuddly (floof) is lost in the (biome) biome. Please rescue them!
+  - Hey if you're in the (biome) biome, can you plesse look out for my (floof)? They
+    got lost!
+  - Please rescue my (floof)! They ran away in the (biome) biome and haven't come
+    back. I'm so worried.
+  - I'm so distraught! My beloved (floof) has gone missing. I last saw them in the
+    (biome) biome!
+  m_floofTextColor: blue
+  m_biomeTextColor: green
 --- !u!1 &4645688934099611855
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5aa8d5e93e2a4442a17b1acd9c0b79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_regions: []
+  m_regions:
+  - {fileID: 0}
 --- !u!1 &4645688935149954781
 GameObject:
   m_ObjectHideFlags: 0

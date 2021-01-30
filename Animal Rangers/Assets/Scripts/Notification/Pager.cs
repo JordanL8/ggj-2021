@@ -18,7 +18,6 @@ public class Pager : MonoBehaviour
     private void Awake()
     {
         m_rectTransform = gameObject.GetComponent<RectTransform>();
-        gameObject.SetActive(false);
     }
 
     public void DisplayNewText(string text)
