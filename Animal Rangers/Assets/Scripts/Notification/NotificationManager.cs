@@ -10,4 +10,9 @@ public class NotificationManager : SingleSceneSingleton<NotificationManager>
     {
         m_pagerUI.DisplayNewText(notification);
     }
+
+    private void Start()
+    {
+        DisplayNotification("Help! My floofy boy got lost in the forest biome! Please can you look for him?");
+    }
 }

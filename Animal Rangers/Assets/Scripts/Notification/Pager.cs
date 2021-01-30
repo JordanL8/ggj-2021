@@ -12,17 +12,26 @@ public class Pager : MonoBehaviour
 
     public float m_readingTime = 10.0f;
 
+    private RectTransform m_rectTransform;
+
+
+    private void Awake()
+    {
+        m_rectTransform = gameObject.GetComponent<RectTransform>();
+    }
+
     public void DisplayNewText(string text)
     {
-        transform.position = m_initialPosition;
+        m_rectTransform.anchoredPosition = m_initialPosition;
         gameObject.SetActive(true);
-        LeanTween.move(gameObject, m_displayPosition, 2f)
-            .setEase(LeanTweenType.easeInElastic)
+        LeanTween.move(m_rectTransform, m_displayPosition, 1f)
+            .setEase(LeanTweenType.easeOutBounce)
             .setOnComplete(() =>
             {
                 m_displayText.text = text;
-                LeanTween.move(gameObject, m_initialPosition, 2f)
+                LeanTween.move(m_rectTransform, m_initialPosition, 1f)
                 .setDelay(m_readingTime)
+                .setEase(LeanTweenType.easeOutQuad)
                 .setOnComplete(() =>
                 {
                     gameObject.SetActive(false);
