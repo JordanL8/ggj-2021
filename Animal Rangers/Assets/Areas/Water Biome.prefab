@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8460769405978891738}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Water Biome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 8460769406550502294}
   - component: {fileID: 8460769406550502293}
   - component: {fileID: 8460769406550502292}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,6 +207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2413002309491064132, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
 --- !u!4 &7083421120363237574 stripped
@@ -224,6 +228,10 @@ PrefabInstance:
     - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_02 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7276476582300999302, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_RootOrder
@@ -298,6 +306,10 @@ PrefabInstance:
     - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7276476582300999302, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_RootOrder
@@ -429,6 +441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2413002309491064132, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
 --- !u!4 &7083421120127690406 stripped
@@ -502,6 +518,10 @@ PrefabInstance:
     - target: {fileID: 2413002309491064132, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2413002309491064132, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
@@ -577,6 +597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2413002309491064132, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
 --- !u!4 &7083421119903748267 stripped
@@ -594,6 +618,10 @@ PrefabInstance:
     - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_02 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7276476582300999302, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_RootOrder
@@ -669,6 +697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7276476582300999302, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -743,6 +775,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7276476582300999302, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -816,6 +852,10 @@ PrefabInstance:
     - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7276476582300999302, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_RootOrder
@@ -947,6 +987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2413002309491064132, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
 --- !u!4 &7083421121199963891 stripped
@@ -964,6 +1008,10 @@ PrefabInstance:
     - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_02 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5953870028102773909, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7276476582300999302, guid: 7189a00800428bd4f985c09dc3937efb, type: 3}
       propertyPath: m_RootOrder
@@ -1094,6 +1142,10 @@ PrefabInstance:
     - target: {fileID: 2413002309491064132, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_waterlily_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2413002309491064132, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3684792a6bf54a4ca8fa021c4f97fdd, type: 3}

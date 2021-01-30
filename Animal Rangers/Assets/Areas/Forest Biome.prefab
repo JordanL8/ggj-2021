@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 90246322}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5194567284619325545}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Forest Biome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,6 +126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_PLANT_leaf_v3_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8756594456697862582, guid: ec730fc16c4b39a45b8d166df01ff71b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec730fc16c4b39a45b8d166df01ff71b, type: 3}
 --- !u!4 &560762987412624874 stripped
@@ -143,6 +147,14 @@ PrefabInstance:
     - target: {fileID: 1230278922285221601, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_leaf_v3_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230278922285221601, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386763104623641999, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7419541650713695486, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
       propertyPath: m_RootOrder
@@ -250,6 +262,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_TREE_trunk_v1_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7370757087980925210, guid: 44d1a059adedf654ebc5fb50e469e17f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d1a059adedf654ebc5fb50e469e17f, type: 3}
 --- !u!4 &1731535314696530497 stripped
@@ -311,6 +327,10 @@ PrefabInstance:
     - target: {fileID: 8756594456697862582, guid: ec730fc16c4b39a45b8d166df01ff71b, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_leaf_v3_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756594456697862582, guid: ec730fc16c4b39a45b8d166df01ff71b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec730fc16c4b39a45b8d166df01ff71b, type: 3}
@@ -374,6 +394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_TREE_trunk_v1_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7370757087980925210, guid: 44d1a059adedf654ebc5fb50e469e17f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d1a059adedf654ebc5fb50e469e17f, type: 3}
 --- !u!4 &1731535313924999422 stripped
@@ -391,6 +415,14 @@ PrefabInstance:
     - target: {fileID: 1230278922285221601, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_leaf_v3_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230278922285221601, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386763104623641999, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7419541650713695486, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
       propertyPath: m_RootOrder
@@ -453,6 +485,14 @@ PrefabInstance:
     - target: {fileID: 1230278922285221601, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_leaf_v3_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230278922285221601, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386763104623641999, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7419541650713695486, guid: b2d61c919fb2c4044aacbc07a2a2c581, type: 3}
       propertyPath: m_RootOrder
@@ -560,6 +600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_TREE_trunk_v1_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7370757087980925210, guid: 44d1a059adedf654ebc5fb50e469e17f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d1a059adedf654ebc5fb50e469e17f, type: 3}
 --- !u!4 &1731535313406228656 stripped
@@ -622,6 +666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_ENV_TREE_trunk_v1_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7370757087980925210, guid: 44d1a059adedf654ebc5fb50e469e17f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d1a059adedf654ebc5fb50e469e17f, type: 3}
 --- !u!4 &1731535313282800964 stripped
@@ -683,6 +731,10 @@ PrefabInstance:
     - target: {fileID: 8756594456697862582, guid: ec730fc16c4b39a45b8d166df01ff71b, type: 3}
       propertyPath: m_Name
       value: P_ENV_PLANT_leaf_v3_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756594456697862582, guid: ec730fc16c4b39a45b8d166df01ff71b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec730fc16c4b39a45b8d166df01ff71b, type: 3}
