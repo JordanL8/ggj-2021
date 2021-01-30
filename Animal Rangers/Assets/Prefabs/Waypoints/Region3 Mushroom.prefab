@@ -1,5 +1,121 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2410711288199359144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203638714196421980}
+  - component: {fileID: 607335568180067124}
+  - component: {fileID: 8189954569127951405}
+  m_Layer: 0
+  m_Name: Mushroom Entrance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203638714196421980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2410711288199359144}
+  m_LocalRotation: {x: -0, y: -0.91663706, z: -0, w: 0.39972043}
+  m_LocalPosition: {x: 7.3149033, y: 6.765608, z: 8.520142}
+  m_LocalScale: {x: 4.0900526, y: 2.4855983, z: 0.94263846}
+  m_Children: []
+  m_Father: {fileID: 8227810775433536733}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -132.879, z: 0}
+--- !u!65 &607335568180067124
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2410711288199359144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8189954569127951405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2410711288199359144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fdb6449aef37e4ea773391f2778d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeToEnter: 3
+--- !u!1 &3926822563067162928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7639398346199143723}
+  - component: {fileID: 6004718077055595245}
+  - component: {fileID: 1858621464104155392}
+  m_Layer: 0
+  m_Name: Mushroom Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7639398346199143723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3926822563067162928}
+  m_LocalRotation: {x: -0, y: -0.91663706, z: -0, w: 0.39972043}
+  m_LocalPosition: {x: 8.29, y: 6.765608, z: 9.55}
+  m_LocalScale: {x: 4.0900526, y: 2.4855983, z: 0.94263846}
+  m_Children: []
+  m_Father: {fileID: 8227810775433536733}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -132.879, z: 0}
+--- !u!65 &6004718077055595245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3926822563067162928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1858621464104155392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3926822563067162928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fdb6449aef37e4ea773391f2778d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeToEnter: 0
 --- !u!1 &8227810775303014426
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,6 +178,8 @@ Transform:
   - {fileID: 8227810776626928942}
   - {fileID: 8227810775303014425}
   - {fileID: 8227810775801641394}
+  - {fileID: 1203638714196421980}
+  - {fileID: 7639398346199143723}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

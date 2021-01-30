@@ -32,6 +32,8 @@ Transform:
   - {fileID: 1937154153260217775}
   - {fileID: 1937154153801932147}
   - {fileID: 1937154153524456236}
+  - {fileID: 8084986777239964038}
+  - {fileID: 621915159110766009}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -147,6 +149,122 @@ Transform:
   m_Father: {fileID: 1937154153130099079}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4094243310578172319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 621915159110766009}
+  - component: {fileID: 9131757584007128978}
+  - component: {fileID: 8826792500916243568}
+  m_Layer: 0
+  m_Name: Flower Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &621915159110766009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094243310578172319}
+  m_LocalRotation: {x: -0, y: -0.9744899, z: -0, w: -0.22443147}
+  m_LocalPosition: {x: 16.56, y: 6.765608, z: 7.18}
+  m_LocalScale: {x: 4.0900517, y: 2.4855983, z: 0.9426382}
+  m_Children: []
+  m_Father: {fileID: 1937154153130099079}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: -205.939, z: 0}
+--- !u!65 &9131757584007128978
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094243310578172319}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8826792500916243568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094243310578172319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fdb6449aef37e4ea773391f2778d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeToEnter: 0
+--- !u!1 &5215222136220972153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8084986777239964038}
+  - component: {fileID: 1022500200939428992}
+  - component: {fileID: 448437912055185631}
+  m_Layer: 0
+  m_Name: Flower Entrance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8084986777239964038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215222136220972153}
+  m_LocalRotation: {x: -0, y: -0.9744899, z: -0, w: -0.22443147}
+  m_LocalPosition: {x: 17.261047, y: 6.765608, z: 5.94709}
+  m_LocalScale: {x: 4.0900517, y: 2.4855983, z: 0.9426382}
+  m_Children: []
+  m_Father: {fileID: 1937154153130099079}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -205.939, z: 0}
+--- !u!65 &1022500200939428992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215222136220972153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &448437912055185631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5215222136220972153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fdb6449aef37e4ea773391f2778d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeToEnter: 4
 --- !u!1 &6676831813008384867
 GameObject:
   m_ObjectHideFlags: 0
