@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
 {
-    [SerializeField] private CharacterController controller;
+    public CharacterController controller;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance;
     [SerializeField] private LayerMask groundMask;
@@ -27,7 +27,12 @@ public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
         enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        //<Camera>().enabled = true;
         GetComponentInChildren<MouseLook>().enabled = true;
+        if (PlayerSwitch.playerInVehicle)
+        {
+            controller.transform.position = ThirdPersonMovement.Instance.controller.transform.position;
+        }
     }
 
     public void Deactivate(bool showCursor = true)
@@ -38,6 +43,7 @@ public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
+        //GetComponentInChildren<Camera>().enabled = false;
         GetComponentInChildren<MouseLook>().enabled = false;
     }
 
