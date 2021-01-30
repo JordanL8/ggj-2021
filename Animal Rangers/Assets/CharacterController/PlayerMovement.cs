@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
 {
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform groundCheck;
@@ -24,18 +24,17 @@ public class PlayerMovement : MonoBehaviour
         GetComponentInChildren<MouseLook>().enabled = true;
     }
 
-    public void Deactivate()
+    public void Deactivate(bool hideCursor = true)
     {
         enabled = false;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        if (hideCursor)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
         GetComponentInChildren<MouseLook>().enabled = false;
     }
 
-    private void Start()
-    {
-        Activate();
-    }
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);

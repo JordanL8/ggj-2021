@@ -20,14 +20,11 @@ public class Pager : MonoBehaviour
 
     public Button m_greenButton;
 
-    private PlayerMovement m_playerController;
-
 
     private void Awake()
     {
         m_greenButton.interactable = false;
         m_rectTransform = gameObject.GetComponent<RectTransform>();
-        m_playerController = FindObjectOfType<PlayerMovement>();
     }
 
     public void DisplayNewText(string text, bool requireButton, OnPagerCloseDelegate onPagerClose = null)
@@ -47,7 +44,7 @@ public class Pager : MonoBehaviour
                 else
                 {
                     m_greenButton.interactable = true;
-                    m_playerController.Deactivate();
+                    PlayerMovement.Instance.Deactivate();
                 }
             });
             
@@ -58,7 +55,7 @@ public class Pager : MonoBehaviour
         if (m_greenButton.interactable)
         {
             m_greenButton.interactable = false;
-            m_playerController.Activate();
+            PlayerMovement.Instance.Activate();
         }
         LeanTween.move(m_rectTransform, m_initialPosition, 1f)
             .setDelay(delay)
