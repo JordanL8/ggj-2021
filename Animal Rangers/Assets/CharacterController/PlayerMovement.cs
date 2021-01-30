@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
 {
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform groundCheck;
@@ -16,7 +16,30 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
 
-    // Update is called once per frame
+    private void Awake()
+    {
+        Activate();
+    }
+
+    public void Activate()
+    {
+        enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        GetComponentInChildren<MouseLook>().enabled = true;
+    }
+
+    public void Deactivate(bool showCursor = true)
+    {
+        enabled = false;
+        if (showCursor)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        GetComponentInChildren<MouseLook>().enabled = false;
+    }
+
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);

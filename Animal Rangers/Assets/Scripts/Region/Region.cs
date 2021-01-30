@@ -9,10 +9,11 @@ public class Region : MonoBehaviour
     public Obstacle[] m_obstacles;
     public GameObject m_blocker;
 
-    public ProgressManager.EJobTitle m_requiredTitle;
+    public EJobTitle m_requiredTitle;
 
     public bool m_isLocked = true;
 
+    public RadarManager.BiomeState floofBiome;
 
     // API
     public void InitialiseForNewDay()
