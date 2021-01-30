@@ -16,7 +16,26 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
 
-    // Update is called once per frame
+    public void Activate()
+    {
+        enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        GetComponentInChildren<MouseLook>().enabled = true;
+    }
+
+    public void Deactivate()
+    {
+        enabled = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        GetComponentInChildren<MouseLook>().enabled = false;
+    }
+
+    private void Start()
+    {
+        Activate();
+    }
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);

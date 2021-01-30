@@ -15,7 +15,7 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
 
 
     /* ---- FOR TESTING ---- */
-    public void FixedUpdate()
+    public void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
             RescueFloofComplete();
@@ -71,6 +71,7 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
     public void RescueFloofComplete()
     {
         GibbleManager.Instance.Credit(m_gibblesPerRescue);
+        ProgressManager.Instance.RegisterNewRescue();
 
         // Last floof rescued
         if (spawnedFloofs.Count == 1)

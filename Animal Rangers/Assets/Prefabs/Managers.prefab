@@ -182,7 +182,7 @@ MonoBehaviour:
   m_pagerUI: {fileID: 0}
   m_notificationTexts:
   - Help! My cuddly (floof) is lost in the (biome) biome. Please rescue them!
-  - Hey if you're in the (biome) biome, can you plesse look out for my (floof)? They
+  - Hey if you're in the (biome) biome, can you please look out for my (floof)? They
     got lost!
   - Please rescue my (floof)! They ran away in the (biome) biome and haven't come
     back. I'm so worried.
@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a1f01a785e14440a86ffd786296646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_promotionThresholds: 000000000000000000000000
 --- !u!1 &4645688934473150449
 GameObject:
   m_ObjectHideFlags: 0
