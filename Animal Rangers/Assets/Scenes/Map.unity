@@ -1602,6 +1602,7 @@ MonoBehaviour:
   m_blocker: {fileID: 120481515}
   m_requiredTitle: 0
   m_isLocked: 1
+  floofBiome: 0
 --- !u!4 &1111532694
 Transform:
   m_ObjectHideFlags: 0
@@ -3328,6 +3329,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8622866564699763594, guid: db8d358825585fc4f829807068acecef, type: 3}
+      propertyPath: floofBiome
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db8d358825585fc4f829807068acecef, type: 3}
 --- !u!1001 &8695556230689479551
@@ -3337,6 +3342,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8695556231131429409, guid: ae1a53b19e785f4408c17706b764ba54, type: 3}
+      propertyPath: floofBiome
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8695556231131429410, guid: ae1a53b19e785f4408c17706b764ba54, type: 3}
       propertyPath: m_RootOrder
       value: 7

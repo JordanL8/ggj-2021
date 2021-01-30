@@ -13,6 +13,7 @@ public class Region : MonoBehaviour
 
     public bool m_isLocked = true;
 
+    public RadarManager.BiomeState floofBiome;
 
     // API
     public void InitialiseForNewDay()

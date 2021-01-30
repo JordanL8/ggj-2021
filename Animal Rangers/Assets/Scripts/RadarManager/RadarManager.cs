@@ -33,31 +33,34 @@ public class RadarManager : MonoBehaviour
     void Update()
     {
         floof = RescueManager.Instance.CurrentFloof.gameObject;
-
-        Debug.Log(biomeState);
-        // check distance between objects 
-        float distance = Vector3.Distance(player.transform.position, floof.transform.position);
-        if (distance > 100f)
-        {
-            radarState = RadarState.FREEZING;
-        }
-        if (distance > 50f && distance < 100f)
-        {
-            radarState = RadarState.COLD;
-        }
-        if (distance > 5f && distance < 50f)
-        {
-            radarState = RadarState.HOT;
-        }
-        if (distance < 5f)
-        {
-            radarState = RadarState.BOILING;
-        }
-        else if (pager.activeSelf)
+        if (pager.activeSelf)
         {
             radarState = RadarState.DISABLED;
         }
+        else if (biomeState != RescueManager.Instance.CurrentFloof.MyRegion.floofBiome)
+        {
+            radarState = RadarState.FREEZING;
+        }
+        else
+        {
+            Debug.Log(biomeState);
+            // check distance between objects 
+            float distance = Vector3.Distance(player.transform.position, floof.transform.position);
+            if (distance > 50f)
+            {
+                radarState = RadarState.COLD;
+            }
+            if (distance > 5f && distance < 50f)
+            {
+                radarState = RadarState.HOT;
+            }
+            if (distance < 5f)
+            {
+                radarState = RadarState.BOILING;
+            }
 
+
+        }
         switch (radarState)
         {
             case RadarState.BOILING:
