@@ -1007,6 +1007,26 @@ PrefabInstance:
       propertyPath: lakesideEntrance
       value: 
       objectReference: {fileID: 1823608598}
+    - target: {fileID: 1481104150, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
+      propertyPath: m_floofPrefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481104150, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
+      propertyPath: m_floofPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 546243141822193697, guid: 25e670fdda34ac2468c8576d2dab9609, type: 3}
+    - target: {fileID: 1481104150, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
+      propertyPath: m_floofPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 2124375337860611848, guid: bc488c37ffdc5074bb727c5fe0f83baa, type: 3}
+    - target: {fileID: 1481104150, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
+      propertyPath: m_floofPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1642814732272004513, guid: dd7edc77d8866a0428f7f73d884514ff, type: 3}
+    - target: {fileID: 1481104150, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
+      propertyPath: m_floofPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 3328538740776850247, guid: 98efc9815f95f39409113ba479d909dd, type: 3}
     - target: {fileID: 4645688934099611840, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
       propertyPath: m_RootOrder
       value: 0
