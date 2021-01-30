@@ -108,3 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a079d948078405347817bd20b6950259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_floofType: Squishy Boi

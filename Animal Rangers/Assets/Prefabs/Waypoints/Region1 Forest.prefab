@@ -979,6 +979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d40fb30d33d80f45b0b8499fd9ab5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_name: Forest
   m_spawnPoints:
   - {fileID: 8695556232251088279}
   - {fileID: 8695556231801644754}

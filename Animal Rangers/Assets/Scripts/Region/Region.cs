@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Region : MonoBehaviour
 {
+    public string m_name;
     public Transform[] m_spawnPoints;
     public Obstacle[] m_obstacles;
     public GameObject m_blocker;

@@ -27,6 +27,5 @@ public class NotificationManager : SingleSceneSingleton<NotificationManager>
         }
 
         m_pagerUI.gameObject.SetActive(false);
-        DisplayNotification("Mini Elephant", "Forest");
     }
 }

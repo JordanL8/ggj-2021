@@ -10,6 +10,9 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
 
     private List<Floof> spawnedFloofs = new List<Floof>();
 
+    private Floof m_currentFloof = null;
+    public Floof CurrentFloof => m_currentFloof;
+
 
     /* ---- FOR TESTING ---- */
     public void FixedUpdate()
@@ -36,6 +39,8 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
         }
 
         DeactivateExtraFloofs();
+        m_currentFloof = spawnedFloofs[0];
+        NotificationManager.Instance.DisplayNotification(m_currentFloof.m_floofType, m_currentFloof.MyRegion.m_name);
     }
 
     public void AddFloofToRegion(Region curRegion)
@@ -44,7 +49,10 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
         Transform[] spawnPoints = curRegion.m_spawnPoints;
 
         // Instantiate the floof and chuck it somewhere       
-        spawnedFloofs.Add(FloofSpawner.Instance.SpawnFloofs(floofToAdd, spawnPoints));
+
+        Floof newFloof = FloofSpawner.Instance.SpawnFloofs(floofToAdd, spawnPoints);
+        newFloof.SetRegion(curRegion);
+        spawnedFloofs.Add(newFloof);
     }
 
     public void DeactivateExtraFloofs()
@@ -60,13 +68,10 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
         floof.StartFollowing();
     }
 
-    public void RescueFloof(Floof floof)
-    {
-        GibbleManager.Instance.Credit(m_gibblesPerRescue);
-    }
-
     public void RescueFloofComplete()
     {
+        GibbleManager.Instance.Credit(m_gibblesPerRescue);
+
         // Last floof rescued
         if (spawnedFloofs.Count == 1)
         {
@@ -82,6 +87,8 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
 
             // Activate next floof
             spawnedFloofs[0].gameObject.SetActive(true);
+            m_currentFloof = spawnedFloofs[0];
+            NotificationManager.Instance.DisplayNotification(m_currentFloof.m_floofType, m_currentFloof.MyRegion.m_name);
             DeactivateExtraFloofs();
         }
     }
