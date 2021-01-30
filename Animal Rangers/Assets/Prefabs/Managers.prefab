@@ -365,6 +365,8 @@ MonoBehaviour:
   m_regions:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4645688935149954781
 GameObject:
   m_ObjectHideFlags: 0

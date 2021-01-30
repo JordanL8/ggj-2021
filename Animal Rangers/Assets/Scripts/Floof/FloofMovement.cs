@@ -28,7 +28,7 @@ public class FloofMovement : MonoBehaviour
     {
         if (target != null)
         {
-            Vector3 dir = target.position - transform.position;
+            Vector3 dir = agent.velocity.normalized;
             dir.y = 0;
             Quaternion rot = Quaternion.LookRotation(dir);
             transform.rotation = Quaternion.Lerp(transform.rotation, rot, m_rotationSpeed * Time.deltaTime);

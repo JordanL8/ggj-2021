@@ -49,11 +49,11 @@ public class RadarManager : MonoBehaviour
             {
                 radarState = RadarState.COLD;
             }
-            if (distance > 5f && distance < 50f)
+            if (distance > 15f && distance < 50f)
             {
                 radarState = RadarState.HOT;
             }
-            if (distance < 5f)
+            if (distance < 15f)
             {
                 radarState = RadarState.BOILING;
             }
