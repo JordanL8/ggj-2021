@@ -16,10 +16,15 @@ public class NotificationManager : SingleSceneSingleton<NotificationManager>
         string formattedFloofText = $"<color={m_floofTextColor}>" + floofType + "</color>";
         string formattedBiomeText = $"<color={m_biomeTextColor}>" + biomeType + "</color>";
         string notification = m_notificationTexts[Random.Range(0, m_notificationTexts.Length - 1)].Replace("(floof)", formattedFloofText).Replace("(biome)", formattedBiomeText);
-        m_pagerUI.DisplayNewText(notification);
+        m_pagerUI.DisplayNewText(notification, false);
     }
 
-    private void Start()
+    public void DisplayNotification(string notification, bool requireButton = false)
+    {
+        m_pagerUI.DisplayNewText(notification, requireButton);
+    }
+
+    private void Awake()
     {
         if(m_pagerUI == null)
         {

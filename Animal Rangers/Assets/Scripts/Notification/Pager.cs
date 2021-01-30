@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Pager : MonoBehaviour
 {
@@ -14,13 +15,19 @@ public class Pager : MonoBehaviour
 
     private RectTransform m_rectTransform;
 
+    public Button m_greenButton;
+
+    private PlayerMovement m_playerController;
+
 
     private void Awake()
     {
+        m_greenButton.interactable = false;
         m_rectTransform = gameObject.GetComponent<RectTransform>();
+        m_playerController = FindObjectOfType<PlayerMovement>();
     }
 
-    public void DisplayNewText(string text)
+    public void DisplayNewText(string text, bool requireButton)
     {
         m_rectTransform.anchoredPosition = m_initialPosition;
         gameObject.SetActive(true);
@@ -29,16 +36,39 @@ public class Pager : MonoBehaviour
             .setOnComplete(() =>
             {
                 m_displayText.text = text;
-                LeanTween.move(m_rectTransform, m_initialPosition, 1f)
-                .setDelay(m_readingTime)
-                .setEase(LeanTweenType.easeOutCubic)
-                .setOnComplete(() =>
+                if (!requireButton)
                 {
-                    m_displayText.text = "";
-                    gameObject.SetActive(false);
-                });
+                    HidePager(m_readingTime);
+                }
+                else
+                {
+                    m_greenButton.interactable = true;
+                    m_playerController.Deactivate();
+                }
             });
             
+    }
+
+    private void HidePager(float delay)
+    {
+        if (m_greenButton.interactable)
+        {
+            m_greenButton.interactable = false;
+            m_playerController.Activate();
+        }
+        LeanTween.move(m_rectTransform, m_initialPosition, 1f)
+            .setDelay(delay)
+            .setEase(LeanTweenType.easeOutCubic)
+            .setOnComplete(() =>
+            {
+                m_displayText.text = "";
+                gameObject.SetActive(false);
+            });
+    }
+
+    public void Close()
+    {
+        HidePager(0.0f);
     }
 
 }

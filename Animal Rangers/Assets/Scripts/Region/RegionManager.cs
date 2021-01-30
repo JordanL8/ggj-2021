@@ -14,7 +14,7 @@ public class RegionManager : MonoBehaviour
     private void InitialseRegionsForNewDay()
     {
         List<Region> activeRegions = new List<Region>();
-        ProgressManager.EJobTitle currentJobTitle = ProgressManager.Instance.CurrentJobTitle;
+        EJobTitle currentJobTitle = ProgressManager.Instance.CurrentJobTitle;
         for (int i = 0; i < m_regions.Length; i++)
         {
             if (currentJobTitle >= m_regions[i].m_requiredTitle &&
