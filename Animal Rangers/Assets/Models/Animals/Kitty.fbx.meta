@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: b430ef8ab1d9d7645b0fced6204e8674
+guid: d14acabeb988dcd4eb5de949a2ba95fc
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #25
+    second: {fileID: 2100000, guid: 0271fdeb882f6664ebc7931fa2e78464, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #26
+    second: {fileID: 2100000, guid: e08e4e7f5dc8b594487d33139f5f340c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #27
+    second: {fileID: 2100000, guid: 766d1142ef5871c4c90a5e071fa35dd2, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Fisheye
+    second: {fileID: 2800000, guid: b71f91f84dfa3814caf77bcddaa5e160, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
