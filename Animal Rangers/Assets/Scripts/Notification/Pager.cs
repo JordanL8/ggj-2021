@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class Pager : MonoBehaviour
 {
+    public delegate void OnPagerCloseDelegate();
+    public OnPagerCloseDelegate m_onPagerClose;
+
     public Vector3 m_initialPosition;
     public Vector3 m_displayPosition;
 
@@ -27,8 +30,9 @@ public class Pager : MonoBehaviour
         m_playerController = FindObjectOfType<PlayerMovement>();
     }
 
-    public void DisplayNewText(string text, bool requireButton)
+    public void DisplayNewText(string text, bool requireButton, OnPagerCloseDelegate onPagerClose = null)
     {
+        m_onPagerClose = onPagerClose;
         m_rectTransform.anchoredPosition = m_initialPosition;
         gameObject.SetActive(true);
         LeanTween.move(m_rectTransform, m_displayPosition, 1f)
@@ -63,6 +67,10 @@ public class Pager : MonoBehaviour
             {
                 m_displayText.text = "";
                 gameObject.SetActive(false);
+                if(m_onPagerClose != null)
+                {
+                    m_onPagerClose.Invoke();
+                }
             });
     }
 

@@ -91,6 +91,6 @@ public class ProgressManager : SingleSceneSingleton<ProgressManager>
         {
             progressNotification += $"<br>You have been promoted to <color=blue>{CurrentJobTitle.ToFormattedString()}</color>. You can now enter more biomes in the park.";
         }
-        NotificationManager.Instance.DisplayNotification(progressNotification, true);
+        NotificationManager.Instance.DisplayNotification(progressNotification, true, DayManager.Instance.ProcessDayStart);
     }
 }

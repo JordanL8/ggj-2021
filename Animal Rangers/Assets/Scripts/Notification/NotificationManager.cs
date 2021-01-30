@@ -11,21 +11,22 @@ public class NotificationManager : SingleSceneSingleton<NotificationManager>
     public string m_floofTextColor;
     public string m_biomeTextColor;
 
-    public void DisplayNotification(string floofType, string biomeType)
+    public void DisplayNotification(string floofType, string biomeType, Pager.OnPagerCloseDelegate onPagerClose = null)
     {
         string formattedFloofText = $"<color={m_floofTextColor}>" + floofType + "</color>";
         string formattedBiomeText = $"<color={m_biomeTextColor}>" + biomeType + "</color>";
         string notification = m_notificationTexts[Random.Range(0, m_notificationTexts.Length - 1)].Replace("(floof)", formattedFloofText).Replace("(biome)", formattedBiomeText);
-        m_pagerUI.DisplayNewText(notification, false);
+        m_pagerUI.DisplayNewText(notification, false, onPagerClose);
     }
 
-    public void DisplayNotification(string notification, bool requireButton = false)
+    public void DisplayNotification(string notification, bool requireButton = false, Pager.OnPagerCloseDelegate onPagerClose = null)
     {
-        m_pagerUI.DisplayNewText(notification, requireButton);
+        m_pagerUI.DisplayNewText(notification, requireButton, onPagerClose);
     }
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         if(m_pagerUI == null)
         {
             m_pagerUI = FindObjectOfType<Pager>();
