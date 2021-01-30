@@ -7,7 +7,6 @@ using System.Linq;
 public class RadarManager : MonoBehaviour
 {
     private GameObject player;
-    private GameObject floof;
 
     [SerializeField] private GameObject lakesideEntrance;
 
@@ -32,12 +31,12 @@ public class RadarManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        floof = RescueManager.Instance.CurrentFloof.gameObject;
-        if (pager.activeSelf)
+        Floof floof = RescueManager.Instance.CurrentFloof;
+        if(floof == null ||pager.activeSelf)
         {
             radarState = RadarState.DISABLED;
         }
-        else if (biomeState != RescueManager.Instance.CurrentFloof.MyRegion.floofBiome)
+        else if (biomeState != floof.MyRegion.floofBiome)
         {
             radarState = RadarState.FREEZING;
         }
