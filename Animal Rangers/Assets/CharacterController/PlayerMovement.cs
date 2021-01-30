@@ -16,6 +16,11 @@ public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
     private Vector3 velocity;
     private bool isGrounded;
 
+    private void Awake()
+    {
+        Activate();
+    }
+
     public void Activate()
     {
         enabled = true;
@@ -24,10 +29,10 @@ public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
         GetComponentInChildren<MouseLook>().enabled = true;
     }
 
-    public void Deactivate(bool hideCursor = true)
+    public void Deactivate(bool showCursor = true)
     {
         enabled = false;
-        if (hideCursor)
+        if (showCursor)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;

@@ -27,7 +27,7 @@ public class DayManager : SingleSceneSingleton<DayManager>
 
     public void ProcessDayStart()
     {
-        PlayerMovement.Instance.Deactivate();
+        PlayerMovement.Instance.Deactivate(false);
         m_currentDay++;
         m_dayNumber.text = $"Day {CurrentDay.ToString()}";
         LeanTween.alphaCanvas(m_newDayCanvas, 1f, 1f).setEase(LeanTweenType.linear)
