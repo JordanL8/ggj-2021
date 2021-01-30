@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 1.4
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 566cc8e80ca8fe5449dfb0f0dfc4ba37, type: 2}
@@ -34,11 +34,11 @@ RenderSettings:
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
-  m_ReflectionBounces: 1
+  m_ReflectionBounces: 2
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1408026378}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.009186396, g: 0.014449761, b: 0.048732344, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 79ae54b0a1c069f408d02f01b377a89b, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 90c3411a1738292449a5b1c32013cd10, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 915592517d46bee4ba7059f897d8007d, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -410,6 +410,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1937154153130099079, guid: 1f0c821487ddd554fa4451c160bac3cc, type: 3}
   m_PrefabInstance: {fileID: 1937154153084810908}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &95745820 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1937154153130099072, guid: 1f0c821487ddd554fa4451c160bac3cc, type: 3}
+  m_PrefabInstance: {fileID: 1937154153084810908}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d40fb30d33d80f45b0b8499fd9ab5d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &215523276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1063,14 @@ PrefabInstance:
       propertyPath: m_regions.Array.data[1]
       value: 
       objectReference: {fileID: 1327391048}
+    - target: {fileID: 4645688934473150451, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
+      propertyPath: m_regions.Array.data[2]
+      value: 
+      objectReference: {fileID: 1714612115}
+    - target: {fileID: 4645688934473150451, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
+      propertyPath: m_regions.Array.data[3]
+      value: 
+      objectReference: {fileID: 95745820}
     - target: {fileID: 4645688935149954783, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
       propertyPath: m_dayNumber
       value: 
@@ -2441,6 +2460,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8227810775433536733, guid: b490ec1605d2842409524ae48c0884e2, type: 3}
   m_PrefabInstance: {fileID: 8227810775937975119}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1714612115 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8227810775433536732, guid: b490ec1605d2842409524ae48c0884e2, type: 3}
+  m_PrefabInstance: {fileID: 8227810775937975119}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d40fb30d33d80f45b0b8499fd9ab5d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1823608598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1823608598, guid: db8d358825585fc4f829807068acecef, type: 3}
@@ -2839,6 +2869,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1935704946}
     m_Modifications:
+    - target: {fileID: 1937154153130099072, guid: 1f0c821487ddd554fa4451c160bac3cc, type: 3}
+      propertyPath: m_blocker
+      value: 
+      objectReference: {fileID: 5065133791105684991}
     - target: {fileID: 1937154153130099078, guid: 1f0c821487ddd554fa4451c160bac3cc, type: 3}
       propertyPath: m_Name
       value: Region4 Flower
@@ -2889,6 +2923,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0c821487ddd554fa4451c160bac3cc, type: 3}
+--- !u!1 &5065133791105684991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6676831813008384867, guid: 1f0c821487ddd554fa4451c160bac3cc, type: 3}
+  m_PrefabInstance: {fileID: 1937154153084810908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5194567284680988940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3320,6 +3359,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1634022704}
     m_Modifications:
+    - target: {fileID: 1294041792171820921, guid: a4c3f671c1fae7046bbd22131adc9675, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.863
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043888503788947443, guid: a4c3f671c1fae7046bbd22131adc9675, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.774001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920548812481785847, guid: a4c3f671c1fae7046bbd22131adc9675, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758597104493924850, guid: a4c3f671c1fae7046bbd22131adc9675, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.799
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618755057955120710, guid: a4c3f671c1fae7046bbd22131adc9675, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.774
+      objectReference: {fileID: 0}
     - target: {fileID: 9092650293633684530, guid: a4c3f671c1fae7046bbd22131adc9675, type: 3}
       propertyPath: m_RootOrder
       value: 1

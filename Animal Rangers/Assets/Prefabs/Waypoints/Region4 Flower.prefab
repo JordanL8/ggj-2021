@@ -55,7 +55,7 @@ MonoBehaviour:
   - {fileID: 1937154153801932147}
   - {fileID: 1937154153524456236}
   m_obstacles: []
-  m_blocker: {fileID: 0}
+  m_blocker: {fileID: 6676831813008384867}
   m_requiredTitle: 3
   m_isLocked: 1
   floofBiome: 4
