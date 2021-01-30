@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a079d948078405347817bd20b6950259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_floofType: Meowf
+  m_floofType: Fluffcloud
 --- !u!95 &2124375337860611850
 Animator:
   serializedVersion: 3
@@ -510,7 +510,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9019706505961297301}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
