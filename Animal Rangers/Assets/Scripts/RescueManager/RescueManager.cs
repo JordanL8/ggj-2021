@@ -21,6 +21,7 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
             while(numberOfFloofsToday > 0)
             {
                 AddFloofToRegion(activeRegions[Random.Range(0, activeRegions.Count)]);
+                numberOfFloofsToday--;
             }
         }
     }
@@ -31,6 +32,7 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
         Transform[] spawnPoints = curRegion.m_spawnPoints;
 
         // Instantiate the floof and chuck it somewhere
+        FloofSpawner.Instance.SpawnFloofs(floofToAdd, spawnPoints);
     }
 
 

@@ -16,11 +16,6 @@ public class DayManager : SingleSceneSingleton<DayManager>
     private int m_currentDay = 0;
     public int CurrentDay => m_currentDay;
 
-    public void Start()
-    {
-        ProcessDayStart();
-    }
-
     public void ProcessDayStart()
     {
         m_isTicking = true;
