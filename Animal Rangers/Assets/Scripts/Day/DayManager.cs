@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DayManager : SingleSceneSingleton<DayManager>
 {
@@ -16,27 +17,38 @@ public class DayManager : SingleSceneSingleton<DayManager>
     private int m_currentDay = 0;
     public int CurrentDay => m_currentDay;
 
+    public CanvasGroup m_newDayCanvas;
+    public TextMeshProUGUI m_dayNumber;
+
+    protected override void Awake()
+    {
+        m_newDayCanvas.alpha = 1.0f;
+    }
+
     public void ProcessDayStart()
     {
-        m_isTicking = true;
-        m_curTime = 0.0f;
+        PlayerMovement.Instance.Deactivate(false);
         m_currentDay++;
+        m_dayNumber.text = $"Day {CurrentDay.ToString()}";
+        LeanTween.alphaCanvas(m_newDayCanvas, 1f, 1f).setEase(LeanTweenType.linear)
+            .setOnComplete(() =>
+            {
+                LeanTween.alphaCanvas(m_newDayCanvas, 0f, 1f).setEase(LeanTweenType.linear)
+                    .setDelay(3.0f)
+                    .setOnComplete(() =>
+                    {
+                        PlayerMovement.Instance.Activate();
 
-
-        // This event should:
-        // 1. Unlock relevant regions.
-        // 2. Populate unlocked regions with animals and create rescue events.
-        m_processDayStart?.Invoke();
+                        m_isTicking = true;
+                        m_curTime = 0.0f;
+        
+                        m_processDayStart?.Invoke();
+                    });
+            });
     }
 
     public void ProcessDayEnd()
     {
-        // This event should:
-        // 1. Open up some end of day UI
-        // 2a. Check how many animals were rescued.
-        // 2b. Promote the player if they have rescued enough.
-        // 3. Clear out the rescue events and the saved animals.
-        // 4. Have a button to start the next day.
         m_processDayEnd?.Invoke();
     }
 

@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &136179448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 136179449}
+  - component: {fileID: 136179450}
+  m_Layer: 0
+  m_Name: RadarManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &136179449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136179448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4645688934099611840}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136179450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136179448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6398dca6724e7a84a88eb9d04f293571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lakesideEntrance: {fileID: 0}
+  boilingRadar: {fileID: 0}
+  hotRadar: {fileID: 0}
+  coldRadar: {fileID: 0}
+  freezingRadar: {fileID: 0}
+  pager: {fileID: 0}
 --- !u!1 &313825939
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +231,7 @@ MonoBehaviour:
   m_pagerUI: {fileID: 0}
   m_notificationTexts:
   - Help! My cuddly (floof) is lost in the (biome) biome. Please rescue them!
-  - Hey if you're in the (biome) biome, can you plesse look out for my (floof)? They
+  - Hey if you're in the (biome) biome, can you please look out for my (floof)? They
     got lost!
   - Please rescue my (floof)! They ran away in the (biome) biome and haven't come
     back. I'm so worried.
@@ -225,6 +274,7 @@ Transform:
   - {fileID: 887469349}
   - {fileID: 1481104149}
   - {fileID: 76239497215801386}
+  - {fileID: 136179449}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -271,6 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a1f01a785e14440a86ffd786296646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_promotionThresholds: 000000000000000000000000
 --- !u!1 &4645688934473150449
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +412,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_dayLength: 300
+  m_newDayCanvas: {fileID: 0}
+  m_dayNumber: {fileID: 0}
 --- !u!1 &7527673923125969188
 GameObject:
   m_ObjectHideFlags: 0
