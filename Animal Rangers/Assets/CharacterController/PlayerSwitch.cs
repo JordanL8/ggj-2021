@@ -9,6 +9,7 @@ public class PlayerSwitch : MonoBehaviour
     [SerializeField] PlayerMovement firstPersonController;
     [SerializeField] ThirdPersonMovement thirdPersonController;
 
+
     private void Update()
     {
         float distance = Vector3.Distance(PlayerMovement.Instance.controller.transform.position, ThirdPersonMovement.Instance.controller.transform.position);

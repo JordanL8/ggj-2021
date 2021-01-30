@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
 {
     public CharacterController controller;
+    [SerializeField] private Transform miniCam;
+    public RawImage miniCamImage;
+
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance;
     [SerializeField] private LayerMask groundMask;
@@ -19,6 +23,10 @@ public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
     protected override void Awake()
     {
         base.Awake();
+        if (!PlayerSwitch.playerInVehicle)
+        {
+            miniCamImage.gameObject.SetActive(true);
+        }
         Activate();
     }
 
@@ -27,8 +35,9 @@ public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
         enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        //<Camera>().enabled = true;
+        miniCamImage.gameObject.SetActive(true);
         GetComponentInChildren<MouseLook>().enabled = true;
+        controller.GetComponent<CharacterController>().enabled = true;
         if (PlayerSwitch.playerInVehicle)
         {
             controller.transform.position = ThirdPersonMovement.Instance.controller.transform.position;
@@ -43,12 +52,18 @@ public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-        //GetComponentInChildren<Camera>().enabled = false;
         GetComponentInChildren<MouseLook>().enabled = false;
+        miniCamImage.gameObject.SetActive(true);
+        controller.GetComponent<CharacterController>().enabled = false;
     }
 
     void Update()
     {
+        float yPos = miniCam.transform.position.y;
+        Vector3 position = controller.transform.position;
+        position.y = yPos;
+        miniCam.transform.position = position;
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
