@@ -14,8 +14,8 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.8316146, g: 0.48713955, b: 0.8396226, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 79ae54b0a1c069f408d02f01b377a89b, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 714120845af7ca243937a596c1b3b4db, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 314ed7c6226c312488e616cb53fd5757, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -988,7 +988,7 @@ Transform:
   - {fileID: 913271387}
   - {fileID: 2122380581}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &716438677
 GameObject:
@@ -1291,7 +1291,7 @@ Transform:
   m_GameObject: {fileID: 844085037}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -95.40534, y: -1.1977571, z: -95.14571}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.23219, y: 0.23219, z: 0.23219}
   m_Children: []
   m_Father: {fileID: 1634022704}
   m_RootOrder: 0
@@ -2024,7 +2024,7 @@ Transform:
   - {fileID: 1536481842}
   - {fileID: 892984524}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1151028226
 GameObject:
@@ -2655,7 +2655,7 @@ Transform:
   - {fileID: 5783455988698279064}
   - {fileID: 6500878810398604464}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659340321
 GameObject:
