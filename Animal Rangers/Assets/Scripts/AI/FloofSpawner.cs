@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FloofSpawner : SingleSceneSingleton<FloofSpawner>
 {
-    public void SpawnFloofs(Floof floof, Transform[] spawnPoints)
+    public Floof SpawnFloofs(Floof floof, Transform[] spawnPoints)
     {
         int randomPoint = Random.Range(0, spawnPoints.Length);
 
@@ -12,6 +12,6 @@ public class FloofSpawner : SingleSceneSingleton<FloofSpawner>
                                             spawnPoints[randomPoint].position.y,
                                             spawnPoints[randomPoint].position.z);
 
-        Instantiate(floof, spawnLocation, Quaternion.identity);
+        return Instantiate(floof, spawnLocation, Quaternion.identity);
     }
 }

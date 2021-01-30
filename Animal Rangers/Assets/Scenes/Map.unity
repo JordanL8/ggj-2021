@@ -264,6 +264,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 887469350, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
+      propertyPath: m_numbersPerDay.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1481104150, guid: ee579dc6723fb234f8d0490afd0eb5f8, type: 3}
       propertyPath: m_floofPrefabs.Array.size
       value: 4
