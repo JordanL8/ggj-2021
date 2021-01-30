@@ -9,8 +9,9 @@ public class LineGame : SingleSceneSingleton<LineGame>
     private void Start()
     {
         GameObject activePath = Instantiate(paths[Random.Range(0, paths.Length)], this.transform);
-        activePath.transform.localScale = new Vector3(120, 120, 1);
-
+        //activePath.transform.localScale = new Vector3(17, 12, 1);
+        //activePath.transform.position = new Vector3(0, 0, 0);
+        
         activePath.AddComponent<PathClick>();
         activePath.AddComponent<PolygonCollider2D>();
         

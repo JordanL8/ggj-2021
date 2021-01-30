@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class MouseTracker : SingleSceneSingleton<MouseTracker>
 {
-    public bool inLine = false;
+    public Camera gameCamera;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 newPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z - transform.position.z)));
+        Vector3 newPos = gameCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z - transform.position.z)));
         newPos.z = transform.position.z;
         transform.position = newPos;
 
@@ -23,7 +22,7 @@ public class MouseTracker : SingleSceneSingleton<MouseTracker>
         
     private void OnCollisionExit2D(Collision2D collision)
     {
-        Debug.Log("Outside");
-        inLine = false;
+        if (collision.gameObject.tag == "Path1")
+            PathClick.instance.inLine = false;
     }
 }
