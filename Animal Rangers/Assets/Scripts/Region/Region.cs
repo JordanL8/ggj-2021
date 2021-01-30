@@ -13,9 +13,17 @@ public class Region : MonoBehaviour
     public bool m_isLocked = true;
 
 
+    // API
+    public void InitialiseForNewDay()
+    {
+        
+    }
+
     public void Unlock()
     {
         m_blocker.SetActive(false);
         m_isLocked = false;
     }
+
+
 }

@@ -13,6 +13,9 @@ public class DayManager : SingleSceneSingleton<DayManager>
     private float m_curTime = 0.0f;
     private bool m_isTicking = false;
 
+    private int m_currentDay = 0;
+    public int CurrentDay => m_currentDay;
+
     public void Start()
     {
         ProcessDayStart();
@@ -20,13 +23,15 @@ public class DayManager : SingleSceneSingleton<DayManager>
 
     public void ProcessDayStart()
     {
+        m_isTicking = true;
+        m_curTime = 0.0f;
+        m_currentDay++;
+
+
         // This event should:
         // 1. Unlock relevant regions.
         // 2. Populate unlocked regions with animals and create rescue events.
         m_processDayStart?.Invoke();
-
-        m_isTicking = true;
-        m_curTime = 0.0f;
     }
 
     public void ProcessDayEnd()

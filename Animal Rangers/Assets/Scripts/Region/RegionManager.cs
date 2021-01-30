@@ -13,6 +13,7 @@ public class RegionManager : MonoBehaviour
 
     private void InitialseRegionsForNewDay()
     {
+        List<Region> activeRegions = new List<Region>();
         ProgressManager.EJobTitle currentJobTitle = ProgressManager.Instance.CurrentJobTitle;
         for (int i = 0; i < m_regions.Length; i++)
         {
@@ -21,6 +22,13 @@ public class RegionManager : MonoBehaviour
             {
                 m_regions[i].Unlock();
             }
+
+            if(!m_regions[i].m_isLocked)
+            {
+                activeRegions.Add(m_regions[i]);
+            }
         }
+
+        RescueManager.Instance.PopulateRegions(activeRegions);
     }
 }
