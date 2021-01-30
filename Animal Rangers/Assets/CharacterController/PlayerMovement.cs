@@ -16,8 +16,9 @@ public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
     private Vector3 velocity;
     private bool isGrounded;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         Activate();
     }
 
