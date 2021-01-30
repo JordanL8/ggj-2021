@@ -63,10 +63,6 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
         }
     }
 
-    public void GetFloof(Floof floof)
-    {
-        floof.StartFollowing();
-    }
 
     public void RescueFloofComplete()
     {
