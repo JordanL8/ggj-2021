@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
 {
-    public CharacterController controller;
-
+    [SerializeField] private CharacterController controller;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance;
     [SerializeField] private LayerMask groundMask;
@@ -29,13 +27,7 @@ public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
         enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        MinimapManager.Instance.SetTarget(transform);
         GetComponentInChildren<MouseLook>().enabled = true;
-        controller.GetComponent<CharacterController>().enabled = true;
-        if (PlayerSwitch.playerInVehicle)
-        {
-            controller.transform.position = ThirdPersonMovement.Instance.controller.transform.position;
-        }
     }
 
     public void Deactivate(bool showCursor = true)
@@ -47,7 +39,6 @@ public class PlayerMovement : SingleSceneSingleton<PlayerMovement>
             Cursor.lockState = CursorLockMode.None;
         }
         GetComponentInChildren<MouseLook>().enabled = false;
-        controller.GetComponent<CharacterController>().enabled = false;
     }
 
     void Update()
