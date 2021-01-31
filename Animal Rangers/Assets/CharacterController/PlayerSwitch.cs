@@ -38,4 +38,7 @@ public class PlayerSwitch : MonoBehaviour
             RadarManager.Instance.m_target = firstPersonController.controller.transform;
         }
     }
+
+
+ 
 }
