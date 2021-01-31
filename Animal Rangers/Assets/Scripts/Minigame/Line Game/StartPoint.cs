@@ -10,5 +10,8 @@ public class StartPoint : SingleSceneSingleton<StartPoint>
         PathClick.instance.inLine = true;
         PathClick.instance.mouseDown = true;
         PathClick.instance.isGood = true;
+
+        PathClick.instance.GetComponent<SpriteRenderer>().color = Color.white;
+        gameObject.GetComponent<SpriteRenderer>().color = Color.grey;
     }
 }
