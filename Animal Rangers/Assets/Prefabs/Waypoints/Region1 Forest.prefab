@@ -72,7 +72,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 10.18
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &390037752
@@ -117,7 +117,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 6.14
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &470606548
@@ -162,7 +162,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 6.14
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &477085350
@@ -207,7 +207,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 2.61
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &622452454
@@ -252,7 +252,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 6.14
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &635974314
@@ -327,7 +327,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 10.18
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &869296381
@@ -372,7 +372,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 8.55
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &954860197
@@ -417,7 +417,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 6.24
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &979745889
@@ -445,7 +445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979745889}
   m_LocalRotation: {x: -0, y: 0.36335808, z: -0, w: 0.93164957}
-  m_LocalPosition: {x: 6.54, y: 0.46000004, z: -15.66}
+  m_LocalPosition: {x: 7.01, y: 0.46000004, z: -14.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5970835543584432486}
@@ -461,8 +461,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 8.55
-  m_Height: 8.57
+  m_Radius: 6.92
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1082423023
@@ -507,7 +507,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 10.18
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1134289170
@@ -552,7 +552,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 10.18
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1135530686
@@ -627,7 +627,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 10.18
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1199263431
@@ -672,7 +672,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 7.96
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1253506121
@@ -717,7 +717,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 2.61
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1351174732
@@ -745,7 +745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351174732}
   m_LocalRotation: {x: -0, y: 0.36335808, z: -0, w: 0.93164957}
-  m_LocalPosition: {x: -5.38, y: 0.46000004, z: -16.53}
+  m_LocalPosition: {x: -2.76, y: 0.46000004, z: -13.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5970835543584432486}
@@ -762,7 +762,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 8.55
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1401855794
@@ -837,7 +837,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 2.61
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1486378302
@@ -882,7 +882,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 5.36
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1550319169
@@ -927,7 +927,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 2.61
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1683916379
@@ -1090,7 +1090,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 8.55
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1920400230
@@ -1135,7 +1135,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 10.18
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1951417364
@@ -1210,7 +1210,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 8.55
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2017363265
@@ -1313,7 +1313,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 8.55
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &449998316316300117
@@ -1446,7 +1446,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 8.55
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &913596040888949045
@@ -1579,7 +1579,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 8.55
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2368660417964788431
@@ -1624,7 +1624,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 8.55
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4771314649136399764
@@ -1911,7 +1911,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 8.55
-  m_Height: 8.57
+  m_Height: 48.01
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8317653710522139572
@@ -3014,7 +3014,12 @@ MonoBehaviour:
   - {fileID: 8695556232289371130}
   - {fileID: 8695556230617476324}
   - {fileID: 8695556231373751730}
-  m_obstacles: []
+  m_obstacles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_blocker: {fileID: 8695556231282364092}
   m_requiredTitle: 0
   m_isLocked: 1

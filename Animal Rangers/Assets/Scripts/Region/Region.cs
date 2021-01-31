@@ -18,7 +18,10 @@ public class Region : MonoBehaviour
     // API
     public void InitialiseForNewDay()
     {
-        
+        for (int i = 0; i < m_obstacles.Length; i++)
+        {
+            m_obstacles[i].gameObject.SetActive(true);
+        }
     }
 
     public void Unlock()
