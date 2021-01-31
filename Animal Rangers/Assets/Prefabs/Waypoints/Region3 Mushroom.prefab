@@ -622,9 +622,9 @@ MonoBehaviour:
   - {fileID: 2730513022675044289}
   m_obstacles: []
   m_blocker: {fileID: 8738221066077624704}
-  m_requiredTitle: 0
+  m_requiredTitle: 2
   m_isLocked: 1
-  floofBiome: 0
+  floofBiome: 3
 --- !u!1 &2730513023098850004
 GameObject:
   m_ObjectHideFlags: 0
