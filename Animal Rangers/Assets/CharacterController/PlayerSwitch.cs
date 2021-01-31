@@ -14,28 +14,31 @@ public class PlayerSwitch : MonoBehaviour
     {
         float distance = Vector3.Distance(PlayerMovement.Instance.controller.transform.position, ThirdPersonMovement.Instance.controller.transform.position);
 
-        if (distance < 10f && !playerInVehicle && Input.GetKeyDown(KeyCode.E)) //enter vehicle
+        if(Input.GetKeyDown(KeyCode.E))
         {
-            thirdPersonController.Activate();
-            firstPersonController.Deactivate();
-            playerInVehicle = true;
-            if(RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target != null)
+            if (distance < 10f && !playerInVehicle) //enter vehicle
             {
-                RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target = thirdPersonController.controller.transform;  
+                thirdPersonController.Activate();
+                firstPersonController.Deactivate();
+                playerInVehicle = true;
+                if (RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target != null)
+                {
+                    RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target = thirdPersonController.controller.transform;
+                }
+                RadarManager.Instance.m_target = thirdPersonController.controller.transform;
             }
-            RadarManager.Instance.m_target = thirdPersonController.controller.transform;
-        }
 
-        if (Input.GetKeyDown(KeyCode.R) && playerInVehicle) //exit vehicle
-        {
-            firstPersonController.Activate();
-            thirdPersonController.Deactivate();
-            playerInVehicle = false;
-            if (RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target != null)
+            else if (playerInVehicle) //exit vehicle
             {
-                RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target = firstPersonController.controller.transform;
+                firstPersonController.Activate();
+                thirdPersonController.Deactivate();
+                playerInVehicle = false;
+                if (RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target != null)
+                {
+                    RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target = firstPersonController.controller.transform;
+                }
+                RadarManager.Instance.m_target = firstPersonController.controller.transform;
             }
-            RadarManager.Instance.m_target = firstPersonController.controller.transform;
         }
     }
 
