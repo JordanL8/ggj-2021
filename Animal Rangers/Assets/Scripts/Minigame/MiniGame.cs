@@ -11,7 +11,7 @@ public class MiniGame : MonoBehaviour
         miniHook = miniGameHook;
         gameObject.SetActive(true);
 
-        RadarManager.Instance.gameObject.SetActive(false);
+        RadarManager.Instance.isHidden = true;
         MinimapManager.Instance.gameObject.SetActive(false);
     }
 
@@ -20,7 +20,7 @@ public class MiniGame : MonoBehaviour
         miniHook.Complete();
         gameObject.SetActive(false);
 
-        RadarManager.Instance.gameObject.SetActive(true);
+        RadarManager.Instance.isHidden = false;
         MinimapManager.Instance.gameObject.SetActive(true);
     }
 }

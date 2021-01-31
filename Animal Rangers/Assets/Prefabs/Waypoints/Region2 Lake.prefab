@@ -116,6 +116,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   biomeToEnter: 0
+--- !u!65 &1068023534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965244769826038655}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5742807, y: 1.1247368, z: 3.0203304}
+  m_Center: {x: -0.48203608, y: 0.57101625, z: -0.8089777}
 --- !u!1 &8622866563043479433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,8 +1305,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 237.119
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2018363210153202887, guid: 805af47075dc09e4aa1d4515686e0583, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 805af47075dc09e4aa1d4515686e0583, type: 3}
+--- !u!1 &3965244769826038655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5450826946438066138, guid: 805af47075dc09e4aa1d4515686e0583, type: 3}
+  m_PrefabInstance: {fileID: 8980840827347897509}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6916352223427058780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2547219439103758585, guid: 805af47075dc09e4aa1d4515686e0583, type: 3}
