@@ -10,8 +10,7 @@ public class Floof : MonoBehaviour
     public Region MyRegion => m_myRegion;
 
     private FloofMovement m_floofMovement;
-
-
+ 
     private void Start()
     {
         m_floofMovement = GetComponent<FloofMovement>();
