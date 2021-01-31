@@ -18,14 +18,6 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
     {
         m_numberOfFloofsToday = m_startNumber;
     }
-    /* ---- FOR TESTING ---- */
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-            RescueFloofComplete();
-    }
-    /* ---- FOR TESTING ---- */
-
 
     public void PopulateRegions(List<Region> activeRegions)
     {
