@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public class RadarManager : MonoBehaviour
+public class RadarManager : SingleSceneSingleton<RadarManager>
 {
     private GameObject player;
 
@@ -21,11 +21,14 @@ public class RadarManager : MonoBehaviour
     [SerializeField] Image freezingRadar; // Wrong region
     [SerializeField] GameObject pager;
 
+    public Transform m_target;
+
     // Start is called before the first frame update
     void Start()
     {
         // Find all appropriate objects in the game scene
         player = GameObject.FindGameObjectWithTag("Player");
+        m_target = PlayerMovement.Instance.controller.transform;
     }
 
     // Update is called once per frame
@@ -43,7 +46,7 @@ public class RadarManager : MonoBehaviour
         else
         {
             // check distance between objects 
-            float distance = Vector3.Distance(player.transform.position, floof.transform.position);
+            float distance = Vector3.Distance(m_target.transform.position, floof.transform.position);
             if (distance > 50f)
             {
                 radarState = RadarState.COLD;
