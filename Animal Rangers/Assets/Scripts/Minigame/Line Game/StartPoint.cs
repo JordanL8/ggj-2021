@@ -9,5 +9,6 @@ public class StartPoint : SingleSceneSingleton<StartPoint>
         PathClick.instance.startClicked = true;
         PathClick.instance.inLine = true;
         PathClick.instance.mouseDown = true;
+        PathClick.instance.isGood = true;
     }
 }
