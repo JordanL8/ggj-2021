@@ -396,11 +396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d40fb30d33d80f45b0b8499fd9ab5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &103858827 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8099771171423653369, guid: 58ef9a7f12b632d4ea665f1cd8381a94, type: 3}
-  m_PrefabInstance: {fileID: 6631755244424214961}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &131910668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1073134397, guid: 1f0c821487ddd554fa4451c160bac3cc, type: 3}
@@ -819,78 +814,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271928163}
-  m_CullTransparentMesh: 1
---- !u!1 &315118558
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 315118559}
-  - component: {fileID: 315118561}
-  - component: {fileID: 315118560}
-  m_Layer: 0
-  m_Name: TPCMap
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &315118559
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315118558}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_Children: []
-  m_Father: {fileID: 2069131668}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &315118560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315118558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 8400000, guid: ff93df496fe58144eb9c10e83611c86d, type: 2}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &315118561
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315118558}
   m_CullTransparentMesh: 1
 --- !u!4 &315261704 stripped
 Transform:
@@ -3239,6 +3162,7 @@ GameObject:
   - component: {fileID: 2069131668}
   - component: {fileID: 2069131671}
   - component: {fileID: 2069131670}
+  - component: {fileID: 2069131669}
   m_Layer: 0
   m_Name: MinimapCanvas
   m_TagString: Untagged
@@ -3258,7 +3182,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 271928164}
-  - {fileID: 315118559}
   m_Father: {fileID: 238821605}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3267,6 +3190,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2069131669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069131667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27478890c9a3ebe46b7f3d310f64016c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2069131670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18600,11 +18535,11 @@ PrefabInstance:
     - target: {fileID: 6631755244074030206, guid: 58ef9a7f12b632d4ea665f1cd8381a94, type: 3}
       propertyPath: miniCam
       value: 
-      objectReference: {fileID: 103858827}
+      objectReference: {fileID: 0}
     - target: {fileID: 6631755244074030206, guid: 58ef9a7f12b632d4ea665f1cd8381a94, type: 3}
       propertyPath: miniCamImage
       value: 
-      objectReference: {fileID: 315118560}
+      objectReference: {fileID: 271928165}
     - target: {fileID: 6631755244074030207, guid: 58ef9a7f12b632d4ea665f1cd8381a94, type: 3}
       propertyPath: firstPersonController
       value: 

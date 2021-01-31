@@ -10,6 +10,9 @@ public class MiniGame : MonoBehaviour
     {
         miniHook = miniGameHook;
         gameObject.SetActive(true);
+
+        RadarManager.Instance.gameObject.SetActive(false);
+        MinimapManager.Instance.gameObject.SetActive(false);
     }
 
     protected virtual void Complete()
@@ -17,5 +20,7 @@ public class MiniGame : MonoBehaviour
         miniHook.Complete();
         gameObject.SetActive(false);
 
+        RadarManager.Instance.gameObject.SetActive(true);
+        MinimapManager.Instance.gameObject.SetActive(true);
     }
 }

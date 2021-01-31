@@ -7,8 +7,6 @@ public class ThirdPersonMovement : SingleSceneSingleton<ThirdPersonMovement>
 {
     public CharacterController controller;
     [SerializeField] private Transform cam;
-    [SerializeField] private Transform miniCam;
-    public RawImage miniCamImage;
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance;
@@ -22,12 +20,10 @@ public class ThirdPersonMovement : SingleSceneSingleton<ThirdPersonMovement>
     private Vector3 velocity;
     private bool isGrounded;
 
-    private void Awake()
+    protected override void Awake()
     {
-        if (!PlayerSwitch.playerInVehicle)
-        {
-            miniCamImage.gameObject.SetActive(false);
-        }
+        base.Awake();
+        Deactivate();
     }
 
     public void Activate()
@@ -36,7 +32,7 @@ public class ThirdPersonMovement : SingleSceneSingleton<ThirdPersonMovement>
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         GetComponentInChildren<Camera>().enabled = true;
-        miniCamImage.gameObject.SetActive(true);
+        GetComponentInChildren<Cinemachine.CinemachineFreeLook>().enabled = true;
     }
 
     public void Deactivate(bool showCursor = true)
@@ -48,18 +44,13 @@ public class ThirdPersonMovement : SingleSceneSingleton<ThirdPersonMovement>
             Cursor.lockState = CursorLockMode.None;
         }
         GetComponentInChildren<Camera>().enabled = false;
-        miniCamImage.gameObject.SetActive(false);
+        GetComponentInChildren<Cinemachine.CinemachineFreeLook>().enabled = false;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        float yPos = miniCam.transform.position.y;
-        Vector3 position = controller.transform.position;
-        position.y = yPos;
-        miniCam.transform.position = position;
-
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
