@@ -3326,7 +3326,7 @@ GameObject:
   - component: {fileID: 2136489886}
   - component: {fileID: 2136489888}
   - component: {fileID: 2136489889}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: MousePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3341,7 +3341,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136489884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1447956231}
@@ -3402,7 +3402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef10bd3ef36d2684cac673ce7e74d6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inLine: 0
   gameCamera: {fileID: 366414691}
 --- !u!58 &2136489889
 CircleCollider2D:
@@ -3419,7 +3418,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 8
 --- !u!1001 &5194567284680988940
 PrefabInstance:
   m_ObjectHideFlags: 0

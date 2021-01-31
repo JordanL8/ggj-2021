@@ -5,12 +5,7 @@ using UnityEngine;
 public class MouseTracker : SingleSceneSingleton<MouseTracker>
 {
     public Camera gameCamera;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -22,7 +17,18 @@ public class MouseTracker : SingleSceneSingleton<MouseTracker>
         
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Path1")
+        if (collision.gameObject.tag == "Line")
+        {
             PathClick.instance.inLine = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Finish")
+        {
+            if (PathClick.instance.mouseDown && PathClick.instance.inLine && PathClick.instance.startClicked)
+                Debug.Log("Finish");
+        }        
     }
 }

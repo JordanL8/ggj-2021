@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 642293218877437809}
   - component: {fileID: 642293218877437810}
   - component: {fileID: 642293218877437811}
+  - component: {fileID: 1196548240014975860}
   m_Layer: 6
   m_Name: Start
   m_TagString: Untagged
@@ -28,7 +29,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642293218877437823}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2}
   m_LocalScale: {x: 0.008333335, y: 0.008333335, z: 1}
   m_Children: []
   m_Father: {fileID: 895710424455977298}
@@ -114,6 +115,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1196548240014975860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642293218877437823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e6ff427e3627a4db4de4544e35f709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &642293219835822285
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +142,7 @@ GameObject:
   - component: {fileID: 642293219835822287}
   m_Layer: 6
   m_Name: Finish
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +155,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642293219835822285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2}
   m_LocalScale: {x: 0.008333335, y: 0.008333335, z: 1}
   m_Children: []
   m_Father: {fileID: 895710424455977298}
@@ -240,7 +253,7 @@ GameObject:
   - component: {fileID: 895710424455977299}
   m_Layer: 5
   m_Name: Path1
-  m_TagString: Untagged
+  m_TagString: Line
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

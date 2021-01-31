@@ -6,20 +6,27 @@ public class PathClick : SingleSceneSingleton<PathClick>
 {
     public bool mouseDown = false;
     public bool inLine = false;
+    public bool startClicked = false;
         
-    private void OnMouseDown()
-    {
-        mouseDown = true;
-    }
+    private void OnMouseDown()  {mouseDown = true;}
 
-    private void OnMouseUp()
+    private void Update()
     {
-        mouseDown = false;
+        if (Input.GetMouseButtonUp(0)) {mouseDown = false;}
+
+        if (!mouseDown || !inLine)
+        {
+            mouseDown = false;
+            inLine = false;
+            startClicked = false;
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "MousePos")
-            Debug.Log("Inside");        
+        if (collision.gameObject.name == "MousePos" && startClicked && mouseDown && inLine)
+        {
+
+        }
     }
 }
