@@ -7,10 +7,7 @@ public class DragGame : MiniGame
     public DragDrop[] dragItems;
     private bool allMoved = false;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
     void Update()
@@ -30,7 +27,6 @@ public class DragGame : MiniGame
         if (allMoved)
         {
             base.Complete();
-            Debug.Log("DNE");
         }
     }
 }

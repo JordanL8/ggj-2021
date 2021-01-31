@@ -14,10 +14,10 @@ public class BreakGame : MiniGame
         breakHits -= 1;
     }
 
-    void Start()
+    public override void StartMiniGame(MiniGameHook miniGameHook)     
     {
+        base.StartMiniGame(miniGameHook);
         breakHits = Random.Range(2, 6);
-        Debug.Log("hits" + breakHits);
 
 
         int rnd = Random.Range(1, breakPoints.Length);
