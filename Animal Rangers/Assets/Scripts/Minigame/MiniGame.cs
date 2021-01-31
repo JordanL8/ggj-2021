@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class MiniGame : MonoBehaviour
 {
-    public delegate void OnCompleteDelegate();
-    public OnCompleteDelegate m_onComplete;
-    public GameObject miniGameObj;
+    private MiniGameHook miniHook;
+
+    public virtual void StartMiniGame(MiniGameHook miniGameHook)
+    {
+        miniHook = miniGameHook;
+        gameObject.SetActive(true);
+
+        RadarManager.Instance.gameObject.SetActive(false);
+        MinimapManager.Instance.gameObject.SetActive(false);
+    }
 
     protected virtual void Complete()
     {
-        Object.Destroy(miniGameObj);
-        m_onComplete?.Invoke();
+        miniHook.Complete();
+        gameObject.SetActive(false);
+
+        RadarManager.Instance.gameObject.SetActive(true);
+        MinimapManager.Instance.gameObject.SetActive(true);
     }
 }

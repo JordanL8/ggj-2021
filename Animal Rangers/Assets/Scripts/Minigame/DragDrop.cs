@@ -9,6 +9,9 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
+    public RectTransform boundary;
+    public bool moved = false; 
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -29,23 +32,32 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("OnPointerDown");
+    }
+
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+
+        if (rectTransform.position.x < boundary.position.x + boundary.rect.width &&
+           rectTransform.position.x + rectTransform.rect.width > boundary.position.x &&
+           rectTransform.position.y < boundary.position.y + boundary.rect.height &&
+           rectTransform.position.y + rectTransform.rect.height > boundary.position.y)
+        {
+            moved = true;
+            Debug.Log("inside");
+            // collision detected!
+        }
         //throw new System.NotImplementedException();
     }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Debug.Log("OnPointerDown");
-        //throw new System.NotImplementedException();
-    }
-
+    
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("OnDrop");
+        Debug.Log("OnDrop1");
         //throw new System.NotImplementedException();
     }
 }
