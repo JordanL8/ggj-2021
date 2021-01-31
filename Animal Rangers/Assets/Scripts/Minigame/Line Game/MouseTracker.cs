@@ -28,7 +28,10 @@ public class MouseTracker : SingleSceneSingleton<MouseTracker>
         if (collision.gameObject.tag == "Finish")
         {
             if (PathClick.instance.mouseDown && PathClick.instance.inLine && PathClick.instance.startClicked)
+            {
                 Debug.Log("Finish");
+                PathClick.instance.GetComponent<SpriteRenderer>().color = Color.green;
+            }
         }        
     }
 }

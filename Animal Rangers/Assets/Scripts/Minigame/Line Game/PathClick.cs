@@ -14,8 +14,10 @@ public class PathClick : SingleSceneSingleton<PathClick>
     {
         if (Input.GetMouseButtonUp(0)) {mouseDown = false;}
 
+        // Failed
         if (!mouseDown || !inLine)
         {
+            GetComponent<SpriteRenderer>().color = Color.Lerp(Color.red, Color.white, 0.005f);
             mouseDown = false;
             inLine = false;
             startClicked = false;
