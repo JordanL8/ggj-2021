@@ -26,6 +26,7 @@ public class RadarManager : MonoBehaviour
     {
         // Find all appropriate objects in the game scene
         player = GameObject.FindGameObjectWithTag("Player");
+        m_target = PlayerMovement.Instance.controller.transform;
     }
 
     // Update is called once per frame
