@@ -9,13 +9,18 @@ public class MiniGameHook : MonoBehaviour
     public OnCompleteDelegate m_onComplete;
 
 
-    public Transform miniGameRect;
-    public Transform m_target;
+    public Transform miniGameTransform;
+    private GameObject player;
+    void Start()
+    {
+        // Find all appropriate objects in the game scene
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     public void Update()
     {
-        float distance = Vector3.Distance(m_target.position, miniGameRect.position);
-        if (distance < 10)
+        float distance = Vector3.Distance(player.transform.position, miniGameTransform.position);
+        if (distance < 10f)
         {
             SetUpMiniGame();
         }
@@ -24,6 +29,8 @@ public class MiniGameHook : MonoBehaviour
 
     public void SetUpMiniGame()
     {
+        Debug.Log("setup");
+
         miniGameRef.gameObject.SetActive(true);
         miniGameRef.StartMiniGame(this);
     }
