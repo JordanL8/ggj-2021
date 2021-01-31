@@ -23,7 +23,7 @@ public class PlayerSwitch : MonoBehaviour
             {
                 RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target = thirdPersonController.controller.transform;  
             }
-
+            RadarManager.Instance.m_target = thirdPersonController.controller.transform;
         }
 
         if (Input.GetKeyDown(KeyCode.R) && playerInVehicle) //exit vehicle
@@ -35,6 +35,7 @@ public class PlayerSwitch : MonoBehaviour
             {
                 RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target = firstPersonController.controller.transform;
             }
+            RadarManager.Instance.m_target = firstPersonController.controller.transform;
         }
     }
 }
