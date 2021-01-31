@@ -12,7 +12,6 @@ public class MouseTracker : SingleSceneSingleton<MouseTracker>
         Vector3 newPos = gameCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Mathf.Abs(Camera.main.transform.position.z - transform.position.z)));
         newPos.z = transform.position.z;
         transform.position = newPos;
-
     }
         
     private void OnCollisionExit2D(Collision2D collision)
@@ -29,7 +28,7 @@ public class MouseTracker : SingleSceneSingleton<MouseTracker>
         {
             if (PathClick.instance.mouseDown && PathClick.instance.inLine && PathClick.instance.startClicked)
             {
-                Debug.Log("Finish");
+                // MINI GAME WON
                 PathClick.instance.GetComponent<SpriteRenderer>().color = Color.green;
                 LineGame.instance.gameObject.SetActive(false);
             }

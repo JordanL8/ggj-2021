@@ -14,8 +14,6 @@ public class PathClick : SingleSceneSingleton<PathClick>
 
     private void Update()
     {
-        //Debug.Log(isGood);isGood && 
-
         if (Input.GetMouseButtonUp(0)) {mouseDown = false;}
 
         // Failed
