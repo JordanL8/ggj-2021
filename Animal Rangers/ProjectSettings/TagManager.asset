@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - BreakPoint
-  - Line
   layers:
   - Default
   - TransparentFX
@@ -13,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - UIFront
+  - Ground
   - 
   - 
   - 
@@ -40,9 +39,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Front
-    uniqueID: 3333709229
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

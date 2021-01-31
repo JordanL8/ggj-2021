@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6882728240797880906}
   - component: {fileID: 6882728240797880907}
   - component: {fileID: 6882728240797880905}
-  - component: {fileID: 6882728240797880911}
   - component: {fileID: 6882728240797880904}
   - component: {fileID: 6882728240797880910}
+  - component: {fileID: 1040014946863876590}
   m_Layer: 0
   m_Name: Floof Kitty
   m_TagString: Untagged
@@ -68,28 +68,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!195 &6882728240797880911
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6882728240797880916}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.7
-  m_Speed: 2.75
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2.5
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &6882728240797880904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  m_maxSpeed: 2.3
+  m_acceleration: 1.5
   m_rotationSpeed: 3
 --- !u!135 &6882728240797880910
 SphereCollider:
@@ -117,6 +97,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1040014946863876590
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6882728240797880916}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
 --- !u!1001 &6882728239278442187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -171,6 +167,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d14acabeb988dcd4eb5de949a2ba95fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.444
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d14acabeb988dcd4eb5de949a2ba95fc, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -3562315131773235714, guid: d14acabeb988dcd4eb5de949a2ba95fc, type: 3}
       propertyPath: m_LocalPosition.x
