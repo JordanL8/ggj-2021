@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 using UnityEngine;
 
-public class BreakObject : MiniGame
+public class BreakGame : MiniGame
 {
     private int breakHits = 5;
     public Button[] breakPoints;
