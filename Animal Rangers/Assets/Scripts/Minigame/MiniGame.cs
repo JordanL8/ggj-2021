@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class MiniGame : MonoBehaviour
 {
-    public delegate void OnCompleteDelegate();
-    public OnCompleteDelegate m_onComplete;
-    public GameObject miniGameObj;
+    private MiniGameHook miniHook;
+
+    public virtual void StartMiniGame(MiniGameHook miniGameHook)
+    {
+        miniHook = miniGameHook;
+        gameObject.SetActive(true);
+    }
 
     protected virtual void Complete()
     {
-        Object.Destroy(miniGameObj);
-        m_onComplete?.Invoke();
+        miniHook.Complete();
+        gameObject.SetActive(false);
+
     }
 }

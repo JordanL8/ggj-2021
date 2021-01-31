@@ -8,7 +8,7 @@ public class Obstacle : MonoBehaviour
 
     public void Start()
     {
-        GetComponent<MiniGame>().m_onComplete += Clear;
+        GetComponent<MiniGameHook>().m_onComplete += Clear;
     }
 
     public void Clear()

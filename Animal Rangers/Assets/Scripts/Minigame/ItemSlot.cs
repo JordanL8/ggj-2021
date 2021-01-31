@@ -11,7 +11,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         Debug.Log("OnDrop");
         if (eventData.pointerDrag != null)
         {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+          //  eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
         }
     }
 }
