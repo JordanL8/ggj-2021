@@ -5,7 +5,7 @@ using UnityEngine;
 public class MouseTracker : SingleSceneSingleton<MouseTracker>
 {
     public Camera gameCamera;
-    
+    public LineGame currentLineGame;
     // Update is called once per frame
     void Update()
     {
@@ -30,7 +30,7 @@ public class MouseTracker : SingleSceneSingleton<MouseTracker>
             {
                 // MINI GAME WON
                 PathClick.instance.GetComponent<SpriteRenderer>().color = Color.green;
-                LineGame.instance.gameObject.SetActive(false);
+                currentLineGame.CompleteLine();
             }
         }        
     }

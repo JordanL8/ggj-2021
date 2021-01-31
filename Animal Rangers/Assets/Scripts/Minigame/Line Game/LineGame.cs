@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LineGame : SingleSceneSingleton<LineGame>
+public class LineGame : MiniGame
 {
     public GameObject[] paths;
 
-    private void Start()
+    public override void StartMiniGame(MiniGameHook miniGameHook)
     {
+        base.StartMiniGame(miniGameHook);
+
+        MouseTracker.Instance.currentLineGame = this;
         GameObject activePath = Instantiate(paths[Random.Range(0, paths.Length)], this.transform);
         
         activePath.AddComponent<PathClick>();
@@ -46,16 +49,10 @@ public class LineGame : SingleSceneSingleton<LineGame>
         rb.constraints = RigidbodyConstraints2D.FreezeAll;        
     }
 
-    void Update()
-    {
 
-        /* ---- FOR TESTING ---- */
-        if (Input.GetKeyDown(KeyCode.L))
-            PlayerMovement.instance.Deactivate();
-        else if (Input.GetKeyDown(KeyCode.K))
-            PlayerMovement.instance.Activate();
-        /* ---- FOR TESTING ---- */
-        
+    public void CompleteLine()
+    {
+        base.Complete();
     }
 
 }
