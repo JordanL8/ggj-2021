@@ -7,7 +7,7 @@ public class MiniGameHook : MonoBehaviour
     public MiniGame miniGameRef;
     public delegate void OnCompleteDelegate();
     public OnCompleteDelegate m_onComplete;
-
+    public Camera miniGameCamera;
 
     public Transform miniGameTransform;
     private GameObject player;
@@ -30,7 +30,16 @@ public class MiniGameHook : MonoBehaviour
     public void SetUpMiniGame()
     {
         Debug.Log("setup");
+        miniGameCamera.gameObject.SetActive(true);
+        if (PlayerSwitch.playerInVehicle)
+        {
+            ThirdPersonMovement.Instance.Deactivate();
+        }
+        else
+        {
+            PlayerMovement.Instance.Deactivate();
 
+        }
         miniGameRef.gameObject.SetActive(true);
         miniGameRef.StartMiniGame(this);
     }
