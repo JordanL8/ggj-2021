@@ -3769,10 +3769,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1634022704}
     m_Modifications:
-    - target: {fileID: 6631755246066885604, guid: 58ef9a7f12b632d4ea665f1cd8381a94, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 1.5393205e-18
-      objectReference: {fileID: 0}
     - target: {fileID: 73019431, guid: a9cf29aed7efdc7458ea7fc7703f48ea, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -6877,6 +6873,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 6631755246066885604, guid: 58ef9a7f12b632d4ea665f1cd8381a94, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1.5393205e-18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9cf29aed7efdc7458ea7fc7703f48ea, type: 3}
 --- !u!4 &5783455988698279064 stripped
@@ -7031,15 +7031,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631755245494848734, guid: 58ef9a7f12b632d4ea665f1cd8381a94, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.008208729
+      value: 0.008208728
       objectReference: {fileID: 0}
     - target: {fileID: 6631755245494848734, guid: 58ef9a7f12b632d4ea665f1cd8381a94, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 9.3129116e-10
+      value: -1.6652972e-16
       objectReference: {fileID: 0}
     - target: {fileID: 6631755245494848734, guid: 58ef9a7f12b632d4ea665f1cd8381a94, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -7.644974e-12
+      value: 1.7787138e-18
       objectReference: {fileID: 0}
     - target: {fileID: 6631755246066885604, guid: 58ef9a7f12b632d4ea665f1cd8381a94, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7105,10 +7105,6 @@ PrefabInstance:
     - target: {fileID: 2730513022971599288, guid: 1900d1f823928294f87da7a12ad3d511, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2730513022971599290, guid: 1900d1f823928294f87da7a12ad3d511, type: 3}
-      propertyPath: m_Icon
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2730513022971599290, guid: 1900d1f823928294f87da7a12ad3d511, type: 3}
       propertyPath: m_Name
