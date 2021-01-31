@@ -1654,7 +1654,7 @@ GameObject:
   - component: {fileID: 7023561322704301404}
   - component: {fileID: 2419910582294939369}
   - component: {fileID: 8738221066077624707}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: BLOCKER
   m_TagString: Untagged
   m_Icon: {fileID: 0}

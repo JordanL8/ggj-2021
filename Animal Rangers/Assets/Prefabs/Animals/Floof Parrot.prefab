@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1642814732272004512}
   - component: {fileID: 1642814732272004513}
   - component: {fileID: 1642814732272004515}
-  - component: {fileID: 1642814732272004517}
   - component: {fileID: 1642814732272004514}
   - component: {fileID: 1642814732272004516}
   - component: {fileID: 5127013377129608708}
@@ -69,28 +68,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!195 &1642814732272004517
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642814732272004542}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.32
-  m_Speed: 2.75
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2.5
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.91
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &1642814732272004514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +81,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  m_stoppingDistance: 2
   m_rotationSpeed: 3
+  m_maxSpeed: 2.5
+  m_acceleration: 2
 --- !u!135 &1642814732272004516
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -132,7 +112,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!1001 &6343647321124157479
 PrefabInstance:

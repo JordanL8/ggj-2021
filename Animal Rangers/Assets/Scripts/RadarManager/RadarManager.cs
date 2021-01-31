@@ -21,6 +21,8 @@ public class RadarManager : SingleSceneSingleton<RadarManager>
     [SerializeField] Image freezingRadar; // Wrong region
     [SerializeField] GameObject pager;
 
+    public bool isHidden = false;
+
     public Transform m_target;
 
     // Start is called before the first frame update
@@ -31,11 +33,13 @@ public class RadarManager : SingleSceneSingleton<RadarManager>
         m_target = PlayerMovement.Instance.controller.transform;
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
         Floof floof = RescueManager.Instance.CurrentFloof;
-        if(floof == null ||pager.activeSelf)
+        if(floof == null ||pager.activeSelf || isHidden)
         {
             radarState = RadarState.DISABLED;
         }
