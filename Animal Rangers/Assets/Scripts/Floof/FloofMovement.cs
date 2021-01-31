@@ -7,12 +7,15 @@ public class FloofMovement : MonoBehaviour
 
     public Transform target;
 
-    public float m_speed;
+    public float m_maxSpeed;
+    public float m_acceleration;
     public float m_rotationSpeed;
 
     private Rigidbody m_rigidbody;
 
     private Animator m_animator;
+
+    private float m_currentSpeed;
 
     private void Start()
     {
@@ -35,8 +38,15 @@ public class FloofMovement : MonoBehaviour
 
             if (distance.magnitude > 3)
             {
-                m_rigidbody.position += dir * m_speed * Time.deltaTime;
+                m_currentSpeed += m_acceleration * Time.deltaTime;
             }
+            else
+            {
+                m_currentSpeed -= m_acceleration * Time.deltaTime;
+            }
+            m_currentSpeed = Mathf.Clamp(m_currentSpeed, 0, m_maxSpeed);
+
+            m_rigidbody.position += dir * m_currentSpeed * Time.deltaTime;
         }
     }
 

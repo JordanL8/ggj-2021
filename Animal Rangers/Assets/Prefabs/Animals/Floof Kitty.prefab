@@ -81,7 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  m_speed: 3
+  m_maxSpeed: 2.3
+  m_acceleration: 1.5
   m_rotationSpeed: 3
 --- !u!135 &6882728240797880910
 SphereCollider:
