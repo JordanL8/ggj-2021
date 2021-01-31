@@ -10,18 +10,16 @@ public class MiniGameHook : MonoBehaviour
     public Camera miniGameCamera;
 
     public Transform miniGameTransform;
-    private GameObject player;
-    void Start()
-    {
-        // Find all appropriate objects in the game scene
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
-
+    private bool started = false;
     public void Update()
     {
-        float distance = Vector3.Distance(player.transform.position, miniGameTransform.position);
-        if (distance < 10f)
+        Vector3 pos = PlayerSwitch.playerInVehicle ? ThirdPersonMovement.Instance.transform.position : PlayerMovement.Instance.transform.position;
+        float distance = Vector3.Distance(pos, miniGameTransform.position);
+      //  Debug.Log(pos);
+       // Debug.Log(distance);
+        if (distance < 5f && !started)
         {
+            started = true;
             SetUpMiniGame();
         }
        
@@ -46,6 +44,16 @@ public class MiniGameHook : MonoBehaviour
 
     public void Complete()
     {
+        miniGameCamera.gameObject.SetActive(false);
+        if (PlayerSwitch.playerInVehicle)
+        {
+            ThirdPersonMovement.Instance.Activate();
+        }
+        else
+        {
+            PlayerMovement.Instance.Activate();
+
+        }
         m_onComplete?.Invoke();
     }
 }

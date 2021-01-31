@@ -18,7 +18,7 @@ public class BreakGame : MiniGame
     {
         base.StartMiniGame(miniGameHook);
         breakHits = Random.Range(2, 6);
-
+        Debug.Log(breakHits);
 
         int rnd = Random.Range(1, breakPoints.Length);
          
