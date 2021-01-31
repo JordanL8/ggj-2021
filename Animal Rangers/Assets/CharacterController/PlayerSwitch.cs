@@ -14,30 +14,26 @@ public class PlayerSwitch : MonoBehaviour
     {
         float distance = Vector3.Distance(PlayerMovement.Instance.controller.transform.position, ThirdPersonMovement.Instance.controller.transform.position);
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (distance < 10f && !playerInVehicle && Input.GetKeyDown(KeyCode.E)) //enter vehicle
         {
-            if (distance < 10f && !playerInVehicle) //enter vehicle
+            thirdPersonController.Activate();
+            firstPersonController.Deactivate();
+            playerInVehicle = true;
+            if(RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target != null)
             {
-                thirdPersonController.Activate();
-                firstPersonController.Deactivate();
-                playerInVehicle = true;
-                if (RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target != null)
-                {
-                    RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target = thirdPersonController.controller.transform;
-                }
-                RadarManager.Instance.m_target = thirdPersonController.controller.transform;
-
+                RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target = thirdPersonController.controller.transform;  
             }
-            else if (playerInVehicle) //exit vehicle
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && playerInVehicle) //exit vehicle
+        {
+            firstPersonController.Activate();
+            thirdPersonController.Deactivate();
+            playerInVehicle = false;
+            if (RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target != null)
             {
-                firstPersonController.Activate();
-                thirdPersonController.Deactivate();
-                playerInVehicle = false;
-                if (RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target != null)
-                {
-                    RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target = firstPersonController.controller.transform;
-                }
-                RadarManager.Instance.m_target = firstPersonController.controller.transform;
+                RescueManager.Instance.CurrentFloof.GetComponent<FloofMovement>().target = firstPersonController.controller.transform;
             }
         }
     }
