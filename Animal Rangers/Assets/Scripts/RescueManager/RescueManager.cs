@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RescueManager : SingleSceneSingleton<RescueManager>
 {
-    public int[] m_numbersPerDay;
+    public int m_startNumber = 2;
+    private int m_numberOfFloofsToday;
 
     public float m_gibblesPerRescue = 20.0f;
 
@@ -13,7 +14,10 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
     private Floof m_currentFloof = null;
     public Floof CurrentFloof => m_currentFloof;
 
-
+    protected override void Awake()
+    {
+        m_numberOfFloofsToday = m_startNumber;
+    }
     /* ---- FOR TESTING ---- */
     public void Update()
     {
@@ -25,22 +29,20 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
 
     public void PopulateRegions(List<Region> activeRegions)
     {
-        if(DayManager.Instance.CurrentDay - 1 < m_numbersPerDay.Length)
+        int todaysFloofs = m_numberOfFloofsToday;
+        AddFloofToRegion(activeRegions[activeRegions.Count - 1]);
+        todaysFloofs--;
+
+        while(todaysFloofs > 0)
         {
-            int numberOfFloofsToday = m_numbersPerDay[DayManager.Instance.CurrentDay - 1] - 1;
-
-            AddFloofToRegion(activeRegions[activeRegions.Count - 1]);
-
-            while(numberOfFloofsToday > 0)
-            {
-                AddFloofToRegion(activeRegions[Random.Range(0, activeRegions.Count)]);
-                numberOfFloofsToday--;
-            }
+            AddFloofToRegion(activeRegions[Random.Range(0, activeRegions.Count)]);
+            todaysFloofs--;
         }
 
         DeactivateExtraFloofs();
         m_currentFloof = spawnedFloofs[0];
         NotificationManager.Instance.DisplayNotification(m_currentFloof.m_floofType, m_currentFloof.MyRegion.m_name);
+        m_numberOfFloofsToday++;
     }
 
     public void AddFloofToRegion(Region curRegion)
@@ -63,10 +65,6 @@ public class RescueManager : SingleSceneSingleton<RescueManager>
         }
     }
 
-    public void GetFloof(Floof floof)
-    {
-        floof.StartFollowing();
-    }
 
     public void RescueFloofComplete()
     {
